@@ -1,0 +1,795 @@
+.admin-users {
+   width: 100%;
+   max-width: 1200px;
+
+   box-sizing: border-box;
+
+   margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-users-header {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+
+   gap: 24px;
+
+   margin-bottom: 30px;
+}
+
+.admin-users-header>div:first-child {
+   min-width: 0;
+}
+
+.admin-users-eyebrow {
+   margin: 0 0 8px;
+
+   color: #6ee7b7;
+
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+}
+
+.admin-users-header h1 {
+   margin: 0;
+
+   color: #f8fafc;
+
+   font-size: 32px;
+   line-height: 1.2;
+
+   overflow-wrap: anywhere;
+}
+
+.admin-users-header p:last-child {
+   margin: 8px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 15px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.admin-users-header-actions {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+
+   gap: 10px;
+
+   flex-wrap: wrap;
+   flex-shrink: 0;
+}
+
+.admin-users-add-user-button,
+.admin-users-add-admin-button,
+.admin-users-add-owner-button {
+   min-height: 42px;
+
+   padding: 9px 15px;
+
+   border-radius: 9px;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   white-space: nowrap;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.15s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.admin-users-add-user-button {
+   border: 1px solid #6ee7b7;
+
+   background: #6ee7b7;
+   color: #06251a;
+}
+
+.admin-users-add-user-button:hover {
+   border-color: #86efac;
+   background: #86efac;
+
+   transform: translateY(-1px);
+}
+
+.admin-users-add-admin-button {
+   border: 1px solid #8b7cf6;
+
+   background: transparent;
+   color: #a5b4fc;
+}
+
+.admin-users-add-admin-button:hover {
+   border-color: #a5b4fc;
+
+   background: rgba(139, 124, 246, 0.08);
+
+   transform: translateY(-1px);
+}
+
+.admin-users-add-owner-button {
+   border: 1px solid #334155;
+
+   background: transparent;
+   color: #6ee7b7;
+}
+
+.admin-users-add-owner-button:hover {
+   border-color: #6ee7b7;
+
+   background: rgba(110, 231, 183, 0.08);
+
+   transform: translateY(-1px);
+}
+
+.admin-users-add-user-button:active,
+.admin-users-add-admin-button:active,
+.admin-users-add-owner-button:active {
+   transform: translateY(1px);
+}
+
+.admin-users-add-user-button:focus-visible,
+.admin-users-add-admin-button:focus-visible,
+.admin-users-add-owner-button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.admin-users-filters {
+   display: grid;
+
+   grid-template-columns: repeat(4, minmax(180px, 1fr));
+
+   gap: 16px;
+
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 24px;
+   padding: 20px;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+}
+
+.admin-users-filter-group {
+   min-width: 0;
+
+   display: flex;
+   flex-direction: column;
+
+   gap: 8px;
+}
+
+.admin-users-filter-group label {
+   color: #cbd5e1;
+
+   font-size: 13px;
+   font-weight: 600;
+
+   overflow-wrap: anywhere;
+}
+
+.admin-users-filter-group input,
+.admin-users-filter-group select {
+   width: 100%;
+   min-width: 0;
+   min-height: 42px;
+
+   box-sizing: border-box;
+
+   padding: 10px 12px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   outline: none;
+
+   background: #0f172a;
+   color: #f8fafc;
+
+   font-size: 14px;
+   font-family: inherit;
+
+   transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+}
+
+.admin-users-filter-group input::placeholder {
+   color: #64748b;
+}
+
+.admin-users-filter-group input:focus,
+.admin-users-filter-group select:focus {
+   border-color: #6ee7b7;
+
+   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.1);
+}
+
+.admin-users-filter-actions {
+   display: flex;
+   align-items: center;
+
+   gap: 10px;
+
+   grid-column: 1 / -1;
+
+   flex-wrap: wrap;
+}
+
+.admin-users-filter-actions button {
+   min-width: 90px;
+   min-height: 42px;
+
+   padding: 10px 18px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.15s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.admin-users-filter-actions button[type="submit"] {
+   border-color: #6ee7b7;
+
+   background: #6ee7b7;
+   color: #06251a;
+}
+
+.admin-users-filter-actions button[type="submit"]:hover {
+   background: #86efac;
+
+   transform: translateY(-1px);
+}
+
+.admin-users-filter-actions button[type="button"] {
+   background: transparent;
+   color: #cbd5e1;
+}
+
+.admin-users-filter-actions button[type="button"]:hover {
+   border-color: #64748b;
+
+   background: #1e293b;
+
+   transform: translateY(-1px);
+}
+
+.admin-users-filter-actions button:active {
+   transform: translateY(0);
+}
+
+.admin-users-filter-actions button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.admin-users-error {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 24px;
+   padding: 14px 16px;
+
+   border: 1px solid #7f1d1d;
+   border-radius: 10px;
+
+   background: #2a1215;
+   color: #fca5a5;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   SORT BUTTONS
+========================================================= */
+
+.admin-sort-button {
+   display: inline-flex;
+   align-items: center;
+
+   gap: 4px;
+
+   max-width: 100%;
+
+   padding: 0;
+
+   border: none;
+
+   background: transparent;
+   color: inherit;
+
+   font: inherit;
+   font-weight: inherit;
+
+   text-transform: inherit;
+   letter-spacing: inherit;
+
+   text-align: left;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.admin-sort-button:hover {
+   color: #6ee7b7;
+}
+
+.admin-sort-button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 3px;
+
+   border-radius: 3px;
+}
+
+.admin-sort-button span {
+   flex-shrink: 0;
+
+   color: #6ee7b7;
+
+   font-size: 13px;
+}
+
+/* =========================================================
+   USERS TABLE
+========================================================= */
+
+.admin-users-card {
+   width: 100%;
+   max-width: 100%;
+
+   box-sizing: border-box;
+
+   overflow: hidden;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+}
+
+.admin-users-table-wrapper {
+   width: 100%;
+   max-width: 100%;
+
+   overflow-x: auto;
+   overflow-y: hidden;
+
+   -webkit-overflow-scrolling: touch;
+   scrollbar-width: thin;
+}
+
+.admin-users-table {
+   width: 100%;
+   min-width: 720px;
+
+   border-collapse: collapse;
+
+   table-layout: fixed;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+   padding: 15px 18px;
+
+   border-bottom: 1px solid #1e293b;
+
+   text-align: left;
+   vertical-align: middle;
+}
+
+.admin-users-table th {
+   background: #0f172a;
+
+   color: #94a3b8;
+
+   font-size: 12px;
+   font-weight: 700;
+
+   text-transform: uppercase;
+   letter-spacing: 0.06em;
+
+   overflow-wrap: anywhere;
+}
+
+.admin-users-table td {
+   color: #cbd5e1;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+.admin-users-table th:nth-child(1),
+.admin-users-table td:nth-child(1) {
+   width: 20%;
+}
+
+.admin-users-table th:nth-child(2),
+.admin-users-table td:nth-child(2) {
+   width: 23%;
+}
+
+.admin-users-table th:nth-child(3),
+.admin-users-table td:nth-child(3) {
+   width: 27%;
+}
+
+.admin-users-table th:nth-child(4),
+.admin-users-table td:nth-child(4) {
+   width: 15%;
+}
+
+.admin-users-table th:nth-child(5),
+.admin-users-table td:nth-child(5) {
+   width: 15%;
+}
+
+.admin-users-table tbody tr {
+   transition: background 0.2s ease;
+}
+
+.admin-users-table tbody tr:last-child td {
+   border-bottom: none;
+}
+
+.admin-users-table tbody tr:hover {
+   background: rgba(255, 255, 255, 0.02);
+}
+
+/* =========================================================
+   TABLE STATES
+========================================================= */
+
+.admin-users-state {
+   padding: 40px 24px;
+
+   text-align: center;
+
+   color: #64748b;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.admin-user-view-button {
+   min-height: 36px;
+
+   padding: 7px 13px;
+
+   border: 1px solid #334155;
+   border-radius: 7px;
+
+   background: transparent;
+   color: #6ee7b7;
+
+   font-size: 12px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   white-space: nowrap;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.15s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.admin-user-view-button:hover {
+   border-color: #6ee7b7;
+
+   background: rgba(110, 231, 183, 0.1);
+
+   color: #86efac;
+
+   transform: translateY(-1px);
+}
+
+.admin-user-view-button:active {
+   background: rgba(110, 231, 183, 0.16);
+
+   transform: translateY(0);
+}
+
+.admin-user-view-button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+   .admin-users-filters {
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+   }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 760px) {
+   .admin-users-header {
+      flex-direction: column;
+   }
+
+   .admin-users-header-actions {
+      width: 100%;
+      justify-content: flex-start;
+   }
+
+   .admin-users-add-user-button,
+   .admin-users-add-admin-button,
+   .admin-users-add-owner-button {
+      flex: 1;
+   }
+
+   .admin-users-filters {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      padding: 18px;
+   }
+
+   .admin-users-table {
+      min-width: 720px;
+   }
+
+   .admin-users-table th,
+   .admin-users-table td {
+      padding: 14px;
+   }
+
+   .admin-users-filter-actions {
+      grid-column: 1 / -1;
+   }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+   .admin-users-header {
+      margin-bottom: 24px;
+   }
+
+   .admin-users-header h1 {
+      font-size: 28px;
+   }
+
+   .admin-users-header p:last-child {
+      font-size: 14px;
+   }
+
+   .admin-users-header-actions {
+      width: 100%;
+
+      flex-direction: column;
+      align-items: stretch;
+   }
+
+   .admin-users-add-user-button,
+   .admin-users-add-admin-button,
+   .admin-users-add-owner-button {
+      width: 100%;
+      flex: none;
+   }
+
+   .admin-users-filters {
+      grid-template-columns: 1fr;
+
+      gap: 14px;
+
+      padding: 16px;
+
+      border-radius: 14px;
+   }
+
+   .admin-users-filter-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      grid-column: auto;
+
+      width: 100%;
+   }
+
+   .admin-users-filter-actions button {
+      width: 100%;
+      min-width: 0;
+   }
+
+   .admin-users-card {
+      border-radius: 14px;
+   }
+
+   .admin-users-table {
+      min-width: 700px;
+   }
+
+   .admin-users-table th,
+   .admin-users-table td {
+      padding: 12px;
+   }
+
+   .admin-users-table th {
+      font-size: 11px;
+   }
+
+   .admin-users-table td {
+      font-size: 13px;
+   }
+
+   .admin-user-view-button {
+      padding: 7px 11px;
+   }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+   .admin-users-header h1 {
+      font-size: 25px;
+   }
+
+   .admin-users-filters {
+      padding: 12px;
+   }
+
+   .admin-users-filter-actions {
+      grid-template-columns: 1fr;
+   }
+
+   .admin-users-filter-actions button {
+      width: 100%;
+   }
+
+   .admin-users-table {
+      min-width: 680px;
+   }
+
+   .admin-users-table th,
+   .admin-users-table td {
+      padding: 10px;
+   }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+   .admin-users-add-user-button:hover {
+      transform: none;
+
+      border-color: #6ee7b7;
+      background: #6ee7b7;
+   }
+
+   .admin-users-add-admin-button:hover {
+      transform: none;
+
+      border-color: #8b7cf6;
+      background: transparent;
+   }
+
+   .admin-users-add-owner-button:hover {
+      transform: none;
+
+      border-color: #334155;
+      background: transparent;
+   }
+
+   .admin-users-filter-actions button[type="submit"]:hover {
+      transform: none;
+      background: #6ee7b7;
+   }
+
+   .admin-users-filter-actions button[type="button"]:hover {
+      transform: none;
+
+      border-color: #334155;
+      background: transparent;
+   }
+
+   .admin-sort-button:hover {
+      color: inherit;
+   }
+
+   .admin-users-table tbody tr:hover {
+      background: transparent;
+   }
+
+   .admin-user-view-button:hover {
+      transform: none;
+
+      border-color: #334155;
+      background: transparent;
+      color: #6ee7b7;
+   }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+   .admin-users-add-user-button,
+   .admin-users-add-admin-button,
+   .admin-users-add-owner-button,
+   .admin-users-filter-group input,
+   .admin-users-filter-group select,
+   .admin-users-filter-actions button,
+   .admin-users-table tbody tr,
+   .admin-user-view-button {
+      transition: none;
+   }
+}

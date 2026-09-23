@@ -1,0 +1,445 @@
+.add-admin {
+   width: 100%;
+   max-width: 900px;
+
+   box-sizing: border-box;
+
+   margin: 0 auto;
+}
+
+.add-admin-header {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+
+   gap: 24px;
+
+   margin-bottom: 30px;
+}
+
+.add-admin-header>div {
+   min-width: 0;
+}
+
+.add-admin-eyebrow {
+   margin: 0 0 8px;
+
+   color: #6ee7b7;
+
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+}
+
+.add-admin-header h1 {
+   margin: 0;
+
+   color: #f8fafc;
+
+   font-size: 32px;
+   line-height: 1.2;
+
+   overflow-wrap: anywhere;
+}
+
+.add-admin-header p:last-child {
+   margin: 8px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 15px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+.add-admin-back {
+   flex-shrink: 0;
+
+   min-height: 40px;
+
+   padding: 9px 16px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   background: transparent;
+   color: #cbd5e1;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   white-space: nowrap;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.15s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.add-admin-back:hover {
+   border-color: #64748b;
+
+   background: #1e293b;
+
+   transform: translateY(-1px);
+}
+
+.add-admin-back:active {
+   transform: translateY(0);
+}
+
+.add-admin-back:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+.add-admin-error,
+.add-admin-success {
+   width: 100%;
+
+   box-sizing: border-box;
+
+   margin-bottom: 24px;
+   padding: 14px 16px;
+
+   border-radius: 10px;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+.add-admin-error {
+   border: 1px solid #7f1d1d;
+
+   background: #2a1215;
+   color: #fca5a5;
+}
+
+.add-admin-success {
+   border: 1px solid #166534;
+
+   background: #0d2418;
+   color: #86efac;
+}
+
+.add-admin-form {
+   display: grid;
+
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+
+   gap: 20px;
+
+   width: 100%;
+
+   box-sizing: border-box;
+
+   padding: 24px;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+}
+
+.add-admin-field {
+   min-width: 0;
+
+   display: flex;
+   flex-direction: column;
+
+   gap: 8px;
+}
+
+.add-admin-field-full {
+   grid-column: 1 / -1;
+}
+
+.add-admin-field label {
+   color: #cbd5e1;
+
+   font-size: 13px;
+   font-weight: 600;
+}
+
+.add-admin-field input,
+.add-admin-field textarea {
+   width: 100%;
+   max-width: 100%;
+
+   box-sizing: border-box;
+
+   padding: 11px 12px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   outline: none;
+
+   background: #0f172a;
+   color: #f8fafc;
+
+   font-size: 14px;
+   font-family: inherit;
+
+   transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+}
+
+.add-admin-field input {
+   min-height: 42px;
+}
+
+.add-admin-field textarea {
+   min-height: 110px;
+
+   resize: vertical;
+
+   line-height: 1.5;
+}
+
+.add-admin-field input::placeholder,
+.add-admin-field textarea::placeholder {
+   color: #64748b;
+}
+
+.add-admin-field input:focus,
+.add-admin-field textarea:focus {
+   border-color: #6ee7b7;
+
+   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.1);
+}
+
+.add-admin-field-hint {
+   color: #64748b;
+
+   font-size: 12px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+.add-admin-actions {
+   grid-column: 1 / -1;
+
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+
+   gap: 10px;
+
+   padding-top: 4px;
+}
+
+.add-admin-cancel,
+.add-admin-submit {
+   min-height: 42px;
+
+   padding: 10px 18px;
+
+   border-radius: 9px;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.15s ease,
+      opacity 0.2s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.add-admin-cancel {
+   border: 1px solid #334155;
+
+   background: transparent;
+   color: #cbd5e1;
+}
+
+.add-admin-cancel:hover {
+   border-color: #64748b;
+
+   background: #1e293b;
+
+   transform: translateY(-1px);
+}
+
+.add-admin-cancel:active {
+   transform: translateY(0);
+}
+
+.add-admin-submit {
+   border: 1px solid #6ee7b7;
+
+   background: #6ee7b7;
+   color: #06251a;
+}
+
+.add-admin-submit:hover:not(:disabled) {
+   background: #86efac;
+
+   transform: translateY(-1px);
+}
+
+.add-admin-submit:active:not(:disabled) {
+   transform: translateY(0);
+}
+
+.add-admin-submit:disabled {
+   cursor: not-allowed;
+
+   opacity: 0.6;
+}
+
+.add-admin-cancel:focus-visible,
+.add-admin-submit:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 760px) {
+   .add-admin-header {
+      flex-direction: column;
+
+      margin-bottom: 24px;
+   }
+
+   .add-admin-header h1 {
+      font-size: 28px;
+   }
+
+   .add-admin-back {
+      width: 100%;
+   }
+
+   .add-admin-form {
+      grid-template-columns: 1fr;
+
+      padding: 20px;
+   }
+
+   .add-admin-field-full,
+   .add-admin-actions {
+      grid-column: auto;
+   }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+   .add-admin-header h1 {
+      font-size: 26px;
+   }
+
+   .add-admin-header p:last-child {
+      font-size: 14px;
+   }
+
+   .add-admin-form {
+      padding: 16px;
+
+      border-radius: 14px;
+
+      gap: 18px;
+   }
+
+   .add-admin-actions {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      width: 100%;
+   }
+
+   .add-admin-cancel,
+   .add-admin-submit {
+      width: 100%;
+   }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+   .add-admin-header h1 {
+      font-size: 23px;
+   }
+
+   .add-admin-form {
+      padding: 14px;
+
+      border-radius: 12px;
+   }
+
+   .add-admin-actions {
+      grid-template-columns: 1fr;
+   }
+
+   .add-admin-cancel,
+   .add-admin-submit {
+      min-height: 44px;
+   }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+   .add-admin-back:hover {
+      transform: none;
+
+      border-color: #334155;
+      background: transparent;
+   }
+
+   .add-admin-cancel:hover {
+      transform: none;
+
+      border-color: #334155;
+      background: transparent;
+   }
+
+   .add-admin-submit:hover:not(:disabled) {
+      transform: none;
+
+      background: #6ee7b7;
+   }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+   .add-admin-back,
+   .add-admin-field input,
+   .add-admin-field textarea,
+   .add-admin-cancel,
+   .add-admin-submit {
+      transition: none;
+   }
+}

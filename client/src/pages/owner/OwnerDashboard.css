@@ -1,0 +1,669 @@
+.owner-dashboard {
+   width: 100%;
+   max-width: 1200px;
+
+   box-sizing: border-box;
+
+   margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.owner-dashboard-header {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 30px;
+}
+
+.owner-dashboard-eyebrow {
+   margin: 0 0 8px;
+
+   color: #6ee7b7;
+
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+.owner-dashboard-header h1 {
+   margin: 0;
+
+   color: #f8fafc;
+
+   font-size: 32px;
+   line-height: 1.2;
+
+   overflow-wrap: anywhere;
+}
+
+.owner-dashboard-header p {
+   margin: 8px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 15px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.owner-dashboard-error {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 24px;
+   padding: 14px 16px;
+
+   border: 1px solid #7f1d1d;
+   border-radius: 10px;
+
+   background: #2a1215;
+   color: #fca5a5;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+/* =========================================================
+   STORE OVERVIEW
+========================================================= */
+
+.owner-store-card {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   gap: 24px;
+
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 24px;
+   padding: 24px;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+
+   overflow: hidden;
+}
+
+.owner-store-card>div:first-child {
+   min-width: 0;
+   flex: 1;
+}
+
+.owner-store-label {
+   display: block;
+
+   margin-bottom: 8px;
+
+   color: #6ee7b7;
+
+   font-size: 11px;
+   font-weight: 700;
+   letter-spacing: 1.4px;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+.owner-store-card h2 {
+   margin: 0;
+
+   color: #f8fafc;
+
+   font-size: 23px;
+   line-height: 1.3;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+.owner-store-card p {
+   margin: 8px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+.owner-store-rating {
+   min-width: 150px;
+
+   box-sizing: border-box;
+
+   padding-left: 24px;
+
+   border-left: 1px solid #1e293b;
+
+   text-align: right;
+}
+
+.owner-store-rating span {
+   display: block;
+
+   margin-bottom: 5px;
+
+   color: #94a3b8;
+
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 1.4;
+}
+
+.owner-store-rating strong {
+   display: block;
+
+   color: #f8fafc;
+
+   font-size: 32px;
+   line-height: 1.1;
+}
+
+.owner-store-rating small {
+   display: block;
+
+   margin-top: 5px;
+
+   color: #64748b;
+
+   font-size: 12px;
+   line-height: 1.4;
+}
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.owner-stats-grid {
+   display: grid;
+
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+
+   gap: 16px;
+
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 24px;
+}
+
+.owner-stat-card {
+   min-width: 0;
+   box-sizing: border-box;
+
+   padding: 20px;
+
+   border: 1px solid #1e293b;
+   border-radius: 14px;
+
+   background: #111827;
+
+   overflow: hidden;
+}
+
+.owner-stat-label {
+   display: block;
+
+   color: #94a3b8;
+
+   font-size: 12px;
+   font-weight: 700;
+
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+.owner-stat-value {
+   display: block;
+
+   margin-top: 10px;
+
+   color: #f8fafc;
+
+   font-size: 30px;
+   line-height: 1.1;
+
+   overflow-wrap: anywhere;
+}
+
+.owner-stat-description {
+   display: block;
+
+   margin-top: 8px;
+
+   color: #64748b;
+
+   font-size: 13px;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   USERS
+========================================================= */
+
+.owner-users-card {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 28px;
+
+   overflow: hidden;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+}
+
+.owner-users-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   gap: 20px;
+
+   padding: 20px 22px;
+
+   border-bottom: 1px solid #1e293b;
+}
+
+.owner-users-header>div:first-child {
+   min-width: 0;
+}
+
+.owner-users-eyebrow {
+   margin: 0 0 7px;
+
+   color: #6ee7b7;
+
+   font-size: 11px;
+   font-weight: 700;
+   letter-spacing: 1.3px;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+.owner-users-header h2 {
+   margin: 0;
+
+   color: #f8fafc;
+
+   font-size: 19px;
+   line-height: 1.3;
+
+   overflow-wrap: anywhere;
+}
+
+.owner-users-count {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+
+   flex-shrink: 0;
+
+   min-width: 34px;
+   min-height: 34px;
+
+   height: 34px;
+
+   padding: 0 10px;
+
+   box-sizing: border-box;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   background: #0f172a;
+   color: #6ee7b7;
+
+   font-size: 13px;
+   font-weight: 700;
+}
+
+/* =========================================================
+   USERS TABLE
+========================================================= */
+
+.owner-users-table-wrapper {
+   width: 100%;
+   max-width: 100%;
+
+   overflow-x: auto;
+   overflow-y: hidden;
+
+   -webkit-overflow-scrolling: touch;
+   scrollbar-width: thin;
+}
+
+.owner-users-table {
+   width: 100%;
+   min-width: 760px;
+
+   border-collapse: collapse;
+
+   table-layout: fixed;
+}
+
+.owner-users-table th,
+.owner-users-table td {
+   padding: 15px 18px;
+
+   border-bottom: 1px solid #1e293b;
+
+   text-align: left;
+   vertical-align: middle;
+}
+
+.owner-users-table th {
+   background: #0f172a;
+
+   color: #94a3b8;
+
+   font-size: 12px;
+   font-weight: 700;
+
+   text-transform: uppercase;
+   letter-spacing: 0.06em;
+
+   white-space: nowrap;
+}
+
+.owner-users-table td {
+   color: #cbd5e1;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+.owner-users-table tbody tr {
+   transition: background 0.2s ease;
+}
+
+.owner-users-table tbody tr:hover {
+   background: rgba(255, 255, 255, 0.02);
+}
+
+.owner-users-table tbody tr:last-child td {
+   border-bottom: none;
+}
+
+/* =========================================================
+   RATING BADGE
+========================================================= */
+
+.owner-rating-badge {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+
+   min-width: 34px;
+   min-height: 30px;
+
+   height: 30px;
+
+   box-sizing: border-box;
+
+   padding: 0 9px;
+
+   border: 1px solid rgba(110, 231, 183, 0.25);
+   border-radius: 7px;
+
+   background: rgba(110, 231, 183, 0.08);
+   color: #6ee7b7;
+
+   font-size: 13px;
+   font-weight: 700;
+}
+
+/* =========================================================
+   CHANGE PASSWORD
+========================================================= */
+
+.change-password {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-top: 28px;
+}
+
+/* =========================================================
+   STATE
+========================================================= */
+
+.owner-dashboard-state {
+   width: 100%;
+   box-sizing: border-box;
+
+   padding: 42px 24px;
+
+   text-align: center;
+
+   color: #64748b;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+   .owner-stats-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+}
+
+/* =========================================================
+   SMALL TABLETS
+========================================================= */
+
+@media (max-width: 760px) {
+   .owner-dashboard-header h1 {
+      font-size: 28px;
+   }
+
+   .owner-store-card {
+      align-items: flex-start;
+
+      flex-direction: column;
+   }
+
+   .owner-store-rating {
+      width: 100%;
+      min-width: 0;
+
+      padding-top: 18px;
+      padding-left: 0;
+
+      border-top: 1px solid #1e293b;
+      border-left: none;
+
+      text-align: left;
+   }
+
+   .owner-stats-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .owner-users-header {
+      padding: 18px 20px;
+   }
+
+   .owner-users-table th,
+   .owner-users-table td {
+      padding: 14px;
+   }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+   .owner-dashboard-header {
+      margin-bottom: 24px;
+   }
+
+   .owner-dashboard-header h1 {
+      font-size: 26px;
+   }
+
+   .owner-dashboard-header p {
+      font-size: 14px;
+   }
+
+   .owner-store-card {
+      gap: 18px;
+
+      padding: 18px;
+
+      border-radius: 14px;
+   }
+
+   .owner-store-card h2 {
+      font-size: 20px;
+   }
+
+   .owner-store-rating strong {
+      font-size: 29px;
+   }
+
+   .owner-stat-card {
+      padding: 18px;
+   }
+
+   .owner-stat-value {
+      font-size: 28px;
+   }
+
+   .owner-users-card {
+      margin-bottom: 24px;
+
+      border-radius: 14px;
+   }
+
+   .owner-users-header {
+      align-items: flex-start;
+
+      gap: 14px;
+
+      padding: 18px;
+   }
+
+   .owner-users-header h2 {
+      font-size: 17px;
+   }
+
+   .owner-users-count {
+      min-width: 32px;
+      height: 32px;
+   }
+
+   .owner-users-table {
+      min-width: 720px;
+   }
+
+   .owner-users-table th,
+   .owner-users-table td {
+      padding: 12px;
+   }
+
+   .owner-users-table th {
+      font-size: 11px;
+   }
+
+   .owner-users-table td {
+      font-size: 13px;
+   }
+
+   .change-password {
+      margin-top: 24px;
+   }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+   .owner-dashboard-header h1 {
+      font-size: 24px;
+   }
+
+   .owner-store-card {
+      padding: 16px;
+   }
+
+   .owner-store-card h2 {
+      font-size: 19px;
+   }
+
+   .owner-stat-card {
+      padding: 16px;
+   }
+
+   .owner-users-header {
+      padding: 16px;
+   }
+
+   .owner-users-table {
+      min-width: 680px;
+   }
+
+   .owner-users-table th,
+   .owner-users-table td {
+      padding: 10px;
+   }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+   .owner-users-table tbody tr:hover {
+      background: transparent;
+   }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+   .owner-users-table tbody tr {
+      transition: none;
+   }
+}

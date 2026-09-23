@@ -1,0 +1,466 @@
+.add-store {
+   width: 100%;
+   max-width: 900px;
+
+   box-sizing: border-box;
+
+   margin: 0 auto;
+}
+
+.add-store-header {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+
+   gap: 24px;
+
+   margin-bottom: 28px;
+}
+
+.add-store-header>div {
+   min-width: 0;
+}
+
+.add-store-eyebrow {
+   margin: 0 0 8px;
+
+   color: #6ee7b7;
+
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+}
+
+.add-store-header h1 {
+   margin: 0;
+
+   color: #f8fafc;
+
+   font-size: 32px;
+   line-height: 1.2;
+
+   overflow-wrap: anywhere;
+}
+
+.add-store-header p:last-child {
+   margin: 8px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 15px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+.add-store-back {
+   flex-shrink: 0;
+
+   min-height: 40px;
+
+   padding: 10px 16px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   background: transparent;
+   color: #cbd5e1;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   white-space: nowrap;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.15s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.add-store-back:hover {
+   border-color: #6ee7b7;
+
+   background: rgba(110, 231, 183, 0.08);
+
+   color: #6ee7b7;
+
+   transform: translateY(-1px);
+}
+
+.add-store-back:active {
+   transform: translateY(0);
+}
+
+.add-store-back:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.add-store-form {
+   display: grid;
+
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+
+   gap: 20px;
+
+   width: 100%;
+
+   box-sizing: border-box;
+
+   padding: 28px;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+}
+
+.add-store-field {
+   min-width: 0;
+
+   display: flex;
+   flex-direction: column;
+
+   gap: 8px;
+}
+
+.add-store-field-full {
+   grid-column: 1 / -1;
+}
+
+.add-store-field label {
+   color: #cbd5e1;
+
+   font-size: 13px;
+   font-weight: 600;
+}
+
+.add-store-field input,
+.add-store-field textarea {
+   width: 100%;
+   max-width: 100%;
+   min-width: 0;
+
+   box-sizing: border-box;
+
+   padding: 11px 12px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   outline: none;
+
+   background: #0f172a;
+   color: #f8fafc;
+
+   font-size: 14px;
+   font-family: inherit;
+
+   transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+}
+
+.add-store-field input {
+   min-height: 42px;
+}
+
+.add-store-field textarea {
+   min-height: 110px;
+
+   resize: vertical;
+
+   line-height: 1.5;
+}
+
+.add-store-field input::placeholder,
+.add-store-field textarea::placeholder {
+   color: #64748b;
+}
+
+.add-store-field input:focus,
+.add-store-field textarea:focus {
+   border-color: #6ee7b7;
+
+   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.1);
+}
+
+.add-store-field-hint {
+   color: #64748b;
+
+   font-size: 12px;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.add-store-error,
+.add-store-success {
+   width: 100%;
+
+   box-sizing: border-box;
+
+   margin-bottom: 20px;
+
+   padding: 14px 16px;
+
+   border-radius: 10px;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+.add-store-error {
+   border: 1px solid #7f1d1d;
+
+   background: #2a1215;
+   color: #fca5a5;
+}
+
+.add-store-success {
+   border: 1px solid #166534;
+
+   background: #0d2618;
+   color: #86efac;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.add-store-actions {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+
+   gap: 10px;
+
+   grid-column: 1 / -1;
+
+   padding-top: 8px;
+}
+
+.add-store-actions button {
+   min-width: 110px;
+   min-height: 42px;
+
+   padding: 11px 18px;
+
+   border-radius: 9px;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      opacity 0.2s ease,
+      transform 0.15s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.add-store-cancel {
+   border: 1px solid #334155;
+
+   background: transparent;
+   color: #cbd5e1;
+}
+
+.add-store-cancel:hover {
+   border-color: #64748b;
+
+   background: #1e293b;
+
+   transform: translateY(-1px);
+}
+
+.add-store-cancel:active {
+   transform: translateY(0);
+}
+
+.add-store-submit {
+   border: 1px solid #6ee7b7;
+
+   background: #6ee7b7;
+   color: #06251a;
+}
+
+.add-store-submit:hover:not(:disabled) {
+   background: #86efac;
+
+   transform: translateY(-1px);
+}
+
+.add-store-submit:active:not(:disabled) {
+   transform: translateY(0);
+}
+
+.add-store-submit:disabled {
+   opacity: 0.6;
+
+   cursor: not-allowed;
+}
+
+.add-store-cancel:focus-visible,
+.add-store-submit:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+   .add-store-header {
+      flex-direction: column;
+
+      gap: 18px;
+   }
+
+   .add-store-header h1 {
+      font-size: 28px;
+   }
+
+   .add-store-back {
+      width: 100%;
+   }
+
+   .add-store-form {
+      grid-template-columns: 1fr;
+
+      padding: 22px;
+   }
+
+   .add-store-field-full,
+   .add-store-actions {
+      grid-column: auto;
+   }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+   .add-store {
+      max-width: 100%;
+   }
+
+   .add-store-header h1 {
+      font-size: 25px;
+   }
+
+   .add-store-header p:last-child {
+      font-size: 14px;
+   }
+
+   .add-store-form {
+      padding: 18px;
+
+      border-radius: 14px;
+
+      gap: 18px;
+   }
+
+   .add-store-actions {
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      width: 100%;
+   }
+
+   .add-store-actions button {
+      width: 100%;
+   }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+   .add-store-header h1 {
+      font-size: 23px;
+   }
+
+   .add-store-form {
+      padding: 14px;
+
+      border-radius: 12px;
+   }
+
+   .add-store-field input,
+   .add-store-field textarea {
+      font-size: 13px;
+   }
+
+   .add-store-actions button {
+      min-height: 44px;
+   }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+   .add-store-back:hover {
+      transform: none;
+
+      border-color: #334155;
+      background: transparent;
+      color: #cbd5e1;
+   }
+
+   .add-store-cancel:hover {
+      transform: none;
+
+      border-color: #334155;
+      background: transparent;
+   }
+
+   .add-store-submit:hover:not(:disabled) {
+      transform: none;
+
+      background: #6ee7b7;
+   }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+   .add-store-back,
+   .add-store-field input,
+   .add-store-field textarea,
+   .add-store-actions button {
+      transition: none;
+   }
+}

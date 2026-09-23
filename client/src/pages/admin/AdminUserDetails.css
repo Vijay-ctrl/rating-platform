@@ -1,0 +1,327 @@
+.admin-user-details {
+   width: 100%;
+   max-width: 1000px;
+
+   box-sizing: border-box;
+
+   margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-user-details-header {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+
+   gap: 24px;
+
+   margin-bottom: 28px;
+}
+
+.admin-user-details-header>div {
+   min-width: 0;
+}
+
+.admin-user-details-eyebrow {
+   margin: 0 0 8px;
+
+   color: #6ee7b7;
+
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+}
+
+.admin-user-details-header h1 {
+   margin: 0;
+
+   color: #f8fafc;
+
+   font-size: 32px;
+   line-height: 1.2;
+
+   overflow-wrap: anywhere;
+}
+
+.admin-user-details-header p:last-child {
+   margin: 8px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 15px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   DETAILS CARD
+========================================================= */
+
+.admin-user-details-card {
+   display: grid;
+
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+
+   gap: 0;
+
+   width: 100%;
+   box-sizing: border-box;
+
+   overflow: hidden;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+}
+
+.admin-user-detail {
+   min-width: 0;
+
+   padding: 22px 24px;
+
+   border-bottom: 1px solid #1e293b;
+
+   box-sizing: border-box;
+}
+
+.admin-user-detail:nth-child(odd) {
+   border-right: 1px solid #1e293b;
+}
+
+.admin-user-detail span {
+   display: block;
+
+   margin-bottom: 8px;
+
+   color: #64748b;
+
+   font-size: 12px;
+   font-weight: 700;
+
+   text-transform: uppercase;
+   letter-spacing: 0.06em;
+
+   overflow-wrap: anywhere;
+}
+
+.admin-user-detail strong {
+   display: block;
+
+   color: #f8fafc;
+
+   font-size: 15px;
+   font-weight: 600;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.admin-user-details-back {
+   flex-shrink: 0;
+
+   min-height: 42px;
+
+   padding: 10px 16px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   background: transparent;
+   color: #cbd5e1;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   white-space: nowrap;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.15s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.admin-user-details-back:hover {
+   border-color: #6ee7b7;
+
+   background: rgba(110, 231, 183, 0.08);
+
+   color: #6ee7b7;
+
+   transform: translateY(-1px);
+}
+
+.admin-user-details-back:active {
+   transform: translateY(0);
+}
+
+.admin-user-details-back:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   STATES
+========================================================= */
+
+.admin-user-details-state {
+   padding: 60px 20px;
+
+   text-align: center;
+
+   color: #64748b;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+.admin-user-details-error {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 20px;
+   padding: 14px 16px;
+
+   border: 1px solid #7f1d1d;
+   border-radius: 10px;
+
+   background: #2a1215;
+   color: #fca5a5;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   TABLETS / MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+   .admin-user-details-header {
+      flex-direction: column;
+
+      gap: 18px;
+
+      margin-bottom: 24px;
+   }
+
+   .admin-user-details-header h1 {
+      font-size: 28px;
+   }
+
+   .admin-user-details-header p:last-child {
+      font-size: 14px;
+   }
+
+   .admin-user-details-back {
+      width: 100%;
+   }
+
+   .admin-user-details-card {
+      grid-template-columns: 1fr;
+
+      border-radius: 14px;
+   }
+
+   .admin-user-detail {
+      padding: 20px;
+   }
+
+   .admin-user-detail:nth-child(odd) {
+      border-right: none;
+   }
+
+   .admin-user-detail:last-child {
+      border-bottom: none;
+   }
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+   .admin-user-details-header h1 {
+      font-size: 25px;
+   }
+
+   .admin-user-detail {
+      padding: 18px;
+   }
+
+   .admin-user-detail strong {
+      font-size: 14px;
+   }
+
+   .admin-user-details-state {
+      padding: 48px 16px;
+   }
+
+   .admin-user-details-error {
+      padding: 12px 14px;
+
+      font-size: 13px;
+   }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 320px) {
+   .admin-user-details-header h1 {
+      font-size: 23px;
+   }
+
+   .admin-user-detail {
+      padding: 16px;
+   }
+
+   .admin-user-details-back {
+      width: 100%;
+   }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+   .admin-user-details-back:hover {
+      transform: none;
+
+      border-color: #334155;
+      background: transparent;
+      color: #cbd5e1;
+   }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+   .admin-user-details-back {
+      transition: none;
+   }
+}

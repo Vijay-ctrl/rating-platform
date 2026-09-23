@@ -1,0 +1,479 @@
+.add-store-owner {
+  width: 100%;
+  max-width: 900px;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+
+.add-store-owner-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 30px;
+}
+
+.add-store-owner-header>div {
+  min-width: 0;
+}
+
+.add-store-owner-eyebrow {
+  margin: 0 0 8px;
+
+  color: #6ee7b7;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.add-store-owner-header h1 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 32px;
+  line-height: 1.2;
+
+  overflow-wrap: anywhere;
+}
+
+.add-store-owner-header p:last-child {
+  margin: 8px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.add-store-owner-back {
+  flex-shrink: 0;
+
+  min-height: 40px;
+
+  padding: 10px 15px;
+
+  border: 1px solid #334155;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+  touch-action: manipulation;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.add-store-owner-back:hover {
+  border-color: #6ee7b7;
+
+  background: rgba(110, 231, 183, 0.08);
+
+  color: #6ee7b7;
+
+  transform: translateY(-1px);
+}
+
+.add-store-owner-back:active {
+  transform: translateY(0);
+}
+
+.add-store-owner-back:focus-visible {
+  outline: 2px solid #6ee7b7;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.add-store-owner-error,
+.add-store-owner-success {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-bottom: 22px;
+
+  padding: 14px 16px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.add-store-owner-error {
+  border: 1px solid #7f1d1d;
+
+  background: #2a1215;
+  color: #fca5a5;
+}
+
+.add-store-owner-success {
+  border: 1px solid #166534;
+
+  background: #10251a;
+  color: #86efac;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.add-store-owner-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 28px;
+
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+
+  background: #111827;
+}
+
+.add-store-owner-field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.add-store-owner-field-full {
+  grid-column: 1 / -1;
+}
+
+.add-store-owner-field label {
+  color: #cbd5e1;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.add-store-owner-field input,
+.add-store-owner-field textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid #334155;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #0f172a;
+  color: #f8fafc;
+
+  font-size: 14px;
+  font-family: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-store-owner-field input {
+  min-height: 44px;
+}
+
+.add-store-owner-field textarea {
+  min-height: 110px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.add-store-owner-field input::placeholder,
+.add-store-owner-field textarea::placeholder {
+  color: #475569;
+}
+
+.add-store-owner-field input:focus,
+.add-store-owner-field textarea:focus {
+  border-color: #6ee7b7;
+
+  box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.08);
+}
+
+.add-store-owner-field-hint {
+  color: #64748b;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.add-store-owner-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 6px;
+  padding-top: 22px;
+
+  border-top: 1px solid #1e293b;
+}
+
+.add-store-owner-cancel,
+.add-store-owner-submit {
+  min-height: 42px;
+
+  padding: 11px 18px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+  touch-action: manipulation;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.15s ease;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.add-store-owner-cancel {
+  border: 1px solid #334155;
+
+  background: transparent;
+  color: #cbd5e1;
+}
+
+.add-store-owner-cancel:hover {
+  border-color: #64748b;
+
+  background: #172235;
+
+  transform: translateY(-1px);
+}
+
+.add-store-owner-cancel:active {
+  transform: translateY(0);
+}
+
+.add-store-owner-submit {
+  border: 1px solid #6ee7b7;
+
+  background: #6ee7b7;
+  color: #06251a;
+}
+
+.add-store-owner-submit:hover:not(:disabled) {
+  background: #86efac;
+  border-color: #86efac;
+
+  transform: translateY(-1px);
+}
+
+.add-store-owner-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.add-store-owner-submit:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.6;
+}
+
+.add-store-owner-cancel:focus-visible,
+.add-store-owner-submit:focus-visible,
+.add-store-owner-back:focus-visible {
+  outline: 2px solid #6ee7b7;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+  .add-store-owner-header {
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .add-store-owner-header h1 {
+    font-size: 28px;
+  }
+
+  .add-store-owner-back {
+    width: 100%;
+  }
+
+  .add-store-owner-form {
+    grid-template-columns: 1fr;
+
+    padding: 20px;
+  }
+
+  .add-store-owner-field-full,
+  .add-store-owner-actions {
+    grid-column: auto;
+  }
+
+  .add-store-owner-actions {
+    flex-direction: column-reverse;
+
+    width: 100%;
+  }
+
+  .add-store-owner-cancel,
+  .add-store-owner-submit {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .add-store-owner-header {
+    margin-bottom: 24px;
+  }
+
+  .add-store-owner-header h1 {
+    font-size: 25px;
+  }
+
+  .add-store-owner-header p:last-child {
+    font-size: 14px;
+  }
+
+  .add-store-owner-form {
+    padding: 16px;
+
+    border-radius: 14px;
+
+    gap: 18px;
+  }
+
+  .add-store-owner-actions {
+    gap: 10px;
+
+    margin-top: 4px;
+    padding-top: 18px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .add-store-owner-header h1 {
+    font-size: 23px;
+  }
+
+  .add-store-owner-form {
+    padding: 14px;
+
+    border-radius: 12px;
+  }
+
+  .add-store-owner-field input,
+  .add-store-owner-field textarea {
+    font-size: 13px;
+  }
+
+  .add-store-owner-cancel,
+  .add-store-owner-submit {
+    min-height: 44px;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+  .add-store-owner-back:hover {
+    transform: none;
+
+    border-color: #334155;
+    background: transparent;
+    color: #cbd5e1;
+  }
+
+  .add-store-owner-cancel:hover {
+    transform: none;
+
+    border-color: #334155;
+    background: transparent;
+  }
+
+  .add-store-owner-submit:hover:not(:disabled) {
+    transform: none;
+
+    background: #6ee7b7;
+    border-color: #6ee7b7;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .add-store-owner-back,
+  .add-store-owner-field input,
+  .add-store-owner-field textarea,
+  .add-store-owner-cancel,
+  .add-store-owner-submit {
+    transition: none;
+  }
+}

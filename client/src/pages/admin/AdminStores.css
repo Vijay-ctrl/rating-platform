@@ -1,0 +1,604 @@
+.admin-stores {
+   width: 100%;
+   max-width: 1200px;
+   box-sizing: border-box;
+   margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-stores-header {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   gap: 24px;
+   margin-bottom: 28px;
+}
+
+.admin-stores-header>div {
+   min-width: 0;
+}
+
+.admin-stores-eyebrow {
+   margin: 0 0 8px;
+   color: #6ee7b7;
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+}
+
+.admin-stores-header h1 {
+   margin: 0;
+   color: #f8fafc;
+   font-size: 32px;
+   line-height: 1.2;
+   overflow-wrap: anywhere;
+}
+
+.admin-stores-header p:last-child {
+   margin: 8px 0 0;
+   color: #94a3b8;
+   font-size: 15px;
+   line-height: 1.5;
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   ADD STORE BUTTON
+========================================================= */
+
+.admin-stores-add-button {
+   flex-shrink: 0;
+   min-height: 42px;
+
+   padding: 10px 16px;
+
+   border: 1px solid #6ee7b7;
+   border-radius: 9px;
+
+   background: #6ee7b7;
+   color: #06251a;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+   white-space: nowrap;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.admin-stores-add-button:hover {
+   border-color: #86efac;
+   background: #86efac;
+   transform: translateY(-1px);
+}
+
+.admin-stores-add-button:active {
+   transform: translateY(1px);
+}
+
+.admin-stores-add-button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.admin-stores-filters {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(180px, 1fr));
+   gap: 16px;
+
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 24px;
+   padding: 20px;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+}
+
+.admin-stores-filter-group {
+   min-width: 0;
+
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.admin-stores-filter-group label {
+   color: #cbd5e1;
+   font-size: 13px;
+   font-weight: 600;
+   overflow-wrap: anywhere;
+}
+
+.admin-stores-filter-group input {
+   width: 100%;
+   min-width: 0;
+   min-height: 42px;
+
+   box-sizing: border-box;
+
+   padding: 11px 12px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   outline: none;
+
+   background: #0f172a;
+   color: #f8fafc;
+
+   font-size: 14px;
+   font-family: inherit;
+
+   transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+}
+
+.admin-stores-filter-group input::placeholder {
+   color: #64748b;
+}
+
+.admin-stores-filter-group input:focus {
+   border-color: #6ee7b7;
+   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.1);
+}
+
+.admin-stores-filter-actions {
+   display: flex;
+   align-items: flex-end;
+   flex-wrap: wrap;
+
+   gap: 10px;
+
+   grid-column: 1 / -1;
+}
+
+.admin-stores-filter-actions button {
+   min-width: 90px;
+   min-height: 42px;
+
+   padding: 11px 18px;
+
+   border: 1px solid #334155;
+   border-radius: 9px;
+
+   font-size: 13px;
+   font-weight: 700;
+   font-family: inherit;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.15s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.admin-stores-filter-actions button[type="submit"] {
+   border-color: #6ee7b7;
+   background: #6ee7b7;
+   color: #06251a;
+}
+
+.admin-stores-filter-actions button[type="submit"]:hover {
+   background: #86efac;
+   transform: translateY(-1px);
+}
+
+.admin-stores-filter-actions button[type="button"] {
+   background: transparent;
+   color: #cbd5e1;
+}
+
+.admin-stores-filter-actions button[type="button"]:hover {
+   border-color: #64748b;
+   background: #1e293b;
+   transform: translateY(-1px);
+}
+
+.admin-stores-filter-actions button:active {
+   transform: translateY(0);
+}
+
+.admin-stores-filter-actions button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 2px;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.admin-stores-error {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 24px;
+   padding: 14px 16px;
+
+   border: 1px solid #7f1d1d;
+   border-radius: 10px;
+
+   background: #2a1215;
+   color: #fca5a5;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   STORES TABLE
+========================================================= */
+
+.admin-stores-card {
+   width: 100%;
+   max-width: 100%;
+   box-sizing: border-box;
+
+   overflow: hidden;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+}
+
+.admin-stores-table-wrapper {
+   width: 100%;
+   max-width: 100%;
+
+   overflow-x: auto;
+   overflow-y: hidden;
+
+   -webkit-overflow-scrolling: touch;
+   scrollbar-width: thin;
+}
+
+.admin-stores-table {
+   width: 100%;
+   min-width: 680px;
+
+   border-collapse: collapse;
+   table-layout: fixed;
+}
+
+.admin-stores-table th,
+.admin-stores-table td {
+   padding: 15px 18px;
+
+   border-bottom: 1px solid #1e293b;
+
+   text-align: left;
+   vertical-align: middle;
+}
+
+.admin-stores-table th {
+   background: #0f172a;
+   color: #94a3b8;
+
+   font-size: 12px;
+   font-weight: 700;
+
+   text-transform: uppercase;
+   letter-spacing: 0.06em;
+
+   overflow-wrap: anywhere;
+}
+
+.admin-stores-table td {
+   color: #cbd5e1;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+.admin-stores-table th:nth-child(1),
+.admin-stores-table td:nth-child(1) {
+   width: 25%;
+}
+
+.admin-stores-table th:nth-child(2),
+.admin-stores-table td:nth-child(2) {
+   width: 25%;
+}
+
+.admin-stores-table th:nth-child(3),
+.admin-stores-table td:nth-child(3) {
+   width: 35%;
+}
+
+.admin-stores-table th:nth-child(4),
+.admin-stores-table td:nth-child(4) {
+   width: 15%;
+}
+
+.admin-stores-table tbody tr:last-child td {
+   border-bottom: none;
+}
+
+.admin-stores-table tbody tr:hover {
+   background: rgba(255, 255, 255, 0.02);
+}
+
+/* =========================================================
+   SORT BUTTONS
+========================================================= */
+
+.admin-stores-sort-button {
+   display: inline-flex;
+   align-items: center;
+   gap: 4px;
+
+   max-width: 100%;
+
+   padding: 0;
+
+   border: none;
+
+   background: transparent;
+   color: inherit;
+
+   font: inherit;
+   font-weight: inherit;
+
+   text-transform: inherit;
+   letter-spacing: inherit;
+
+   text-align: left;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.admin-stores-sort-button:hover {
+   color: #6ee7b7;
+}
+
+.admin-stores-sort-button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 3px;
+   border-radius: 3px;
+}
+
+.admin-stores-sort-button span {
+   flex-shrink: 0;
+   color: #6ee7b7;
+   font-size: 13px;
+}
+
+/* =========================================================
+   STATES
+========================================================= */
+
+.admin-stores-state {
+   padding: 60px 20px;
+
+   text-align: center;
+
+   color: #64748b;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   LARGE TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+   .admin-stores-filters {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 760px) {
+   .admin-stores-header {
+      gap: 18px;
+   }
+
+   .admin-stores-header h1 {
+      font-size: 28px;
+   }
+
+   .admin-stores-filters {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: 18px;
+   }
+
+   .admin-stores-table {
+      min-width: 680px;
+   }
+
+   .admin-stores-table th,
+   .admin-stores-table td {
+      padding: 14px;
+   }
+
+   .admin-stores-filter-actions {
+      grid-column: 1 / -1;
+   }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+   .admin-stores-header {
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 24px;
+   }
+
+   .admin-stores-header h1 {
+      font-size: 26px;
+   }
+
+   .admin-stores-header p:last-child {
+      font-size: 14px;
+   }
+
+   .admin-stores-add-button {
+      width: 100%;
+   }
+
+   .admin-stores-filters {
+      grid-template-columns: 1fr;
+
+      gap: 14px;
+
+      padding: 16px;
+
+      border-radius: 14px;
+   }
+
+   .admin-stores-filter-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      grid-column: auto;
+
+      width: 100%;
+   }
+
+   .admin-stores-filter-actions button {
+      width: 100%;
+      min-width: 0;
+   }
+
+   .admin-stores-card {
+      border-radius: 14px;
+   }
+
+   .admin-stores-table {
+      min-width: 660px;
+   }
+
+   .admin-stores-table th,
+   .admin-stores-table td {
+      padding: 12px;
+   }
+
+   .admin-stores-table th {
+      font-size: 11px;
+   }
+
+   .admin-stores-table td {
+      font-size: 13px;
+   }
+
+   .admin-stores-state {
+      padding: 48px 16px;
+   }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+   .admin-stores-header h1 {
+      font-size: 23px;
+   }
+
+   .admin-stores-filters {
+      padding: 12px;
+   }
+
+   .admin-stores-filter-actions {
+      grid-template-columns: 1fr;
+   }
+
+   .admin-stores-filter-actions button {
+      width: 100%;
+   }
+
+   .admin-stores-table {
+      min-width: 640px;
+   }
+
+   .admin-stores-table th,
+   .admin-stores-table td {
+      padding: 10px;
+   }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+   .admin-stores-add-button:hover {
+      transform: none;
+      border-color: #6ee7b7;
+      background: #6ee7b7;
+   }
+
+   .admin-stores-filter-actions button[type="submit"]:hover {
+      transform: none;
+      background: #6ee7b7;
+   }
+
+   .admin-stores-filter-actions button[type="button"]:hover {
+      transform: none;
+      border-color: #334155;
+      background: transparent;
+   }
+
+   .admin-stores-table tbody tr:hover {
+      background: transparent;
+   }
+
+   .admin-stores-sort-button:hover {
+      color: inherit;
+   }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+   .admin-stores-add-button,
+   .admin-stores-filter-group input,
+   .admin-stores-filter-actions button {
+      transition: none;
+   }
+}

@@ -1,0 +1,71 @@
+.dashboard-layout {
+   width: 100%;
+   min-height: 100vh;
+   min-height: 100dvh;
+
+   box-sizing: border-box;
+
+   background: #0b1220;
+}
+
+.dashboard-body {
+   display: flex;
+
+   width: 100%;
+   min-height: calc(100vh - 72px);
+   min-height: calc(100dvh - 72px);
+
+   box-sizing: border-box;
+}
+
+.dashboard-content {
+   flex: 1 1 auto;
+
+   min-width: 0;
+   width: 100%;
+
+   box-sizing: border-box;
+
+   padding: 28px;
+
+   overflow-x: hidden;
+}
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+   .dashboard-body {
+      flex-direction: column;
+
+      min-height: calc(100vh - 72px);
+      min-height: calc(100dvh - 72px);
+   }
+
+   .dashboard-content {
+      width: 100%;
+
+      padding: 20px 16px;
+   }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+   .dashboard-content {
+      padding: 18px 12px;
+   }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+   .dashboard-content {
+      padding: 16px 10px;
+   }
+}

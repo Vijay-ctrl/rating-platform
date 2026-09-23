@@ -1,0 +1,475 @@
+.register-page {
+   min-height: 100vh;
+   min-height: 100dvh;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   box-sizing: border-box;
+
+   padding: 32px 24px;
+
+   background: #0b1220;
+
+   overflow-x: hidden;
+}
+
+/* =========================================================
+   REGISTER CARD
+========================================================= */
+
+.register-card {
+   width: 100%;
+   max-width: 500px;
+
+   box-sizing: border-box;
+
+   padding: 40px;
+
+   border: 1px solid #1f2a3d;
+   border-radius: 20px;
+
+   background: #111a2b;
+
+   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.register-header {
+   margin-bottom: 30px;
+}
+
+.register-eyebrow {
+   margin: 0 0 10px;
+
+   color: #6ee7b7;
+
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 0.14em;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+.register-header h1 {
+   margin: 0 0 10px;
+
+   color: #f8fafc;
+
+   font-size: 30px;
+   line-height: 1.2;
+
+   overflow-wrap: anywhere;
+}
+
+.register-header p:last-child {
+   margin: 0;
+
+   color: #94a3b8;
+
+   font-size: 15px;
+   line-height: 1.6;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.register-error,
+.register-success {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 20px;
+   padding: 12px 14px;
+
+   border-radius: 10px;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+.register-error {
+   border: 1px solid #7f1d1d;
+
+   background: #450a0a;
+   color: #fecaca;
+}
+
+.register-success {
+   border: 1px solid #166534;
+
+   background: #052e16;
+   color: #bbf7d0;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.register-form {
+   display: flex;
+   flex-direction: column;
+
+   gap: 19px;
+
+   width: 100%;
+}
+
+.form-group {
+   display: flex;
+   flex-direction: column;
+
+   gap: 8px;
+
+   width: 100%;
+   min-width: 0;
+}
+
+.form-group label {
+   color: #e2e8f0;
+
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+.form-group input,
+.form-group textarea {
+   width: 100%;
+   min-width: 0;
+
+   box-sizing: border-box;
+
+   padding: 13px 14px;
+
+   border: 1px solid #334155;
+   border-radius: 10px;
+
+   outline: none;
+
+   background: #0f172a;
+   color: #f8fafc;
+
+   font-size: 15px;
+   font-family: inherit;
+   line-height: 1.4;
+
+   transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+   -webkit-appearance: none;
+}
+
+.form-group input {
+   min-height: 46px;
+}
+
+.form-group textarea {
+   min-height: 90px;
+
+   resize: vertical;
+
+   line-height: 1.5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+   color: #64748b;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+   border-color: #6ee7b7;
+
+   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.12);
+}
+
+.form-group input:disabled,
+.form-group textarea:disabled {
+   cursor: not-allowed;
+
+   opacity: 0.6;
+}
+
+/* =========================================================
+   FIELD HINT
+========================================================= */
+
+.field-hint {
+   color: #64748b;
+
+   font-size: 12px;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.register-form>button {
+   width: 100%;
+   min-height: 46px;
+
+   box-sizing: border-box;
+
+   margin-top: 5px;
+   padding: 13px 18px;
+
+   border: none;
+   border-radius: 10px;
+
+   background: #6ee7b7;
+   color: #06251a;
+
+   font-size: 15px;
+   font-weight: 700;
+   font-family: inherit;
+   line-height: 1.4;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   transition:
+      transform 0.2s ease,
+      opacity 0.2s ease,
+      background 0.2s ease;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.register-form>button:hover {
+   background: #86efac;
+
+   transform: translateY(-1px);
+}
+
+.register-form>button:active {
+   transform: translateY(0);
+}
+
+.register-form>button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 3px;
+}
+
+.register-form>button:disabled {
+   cursor: not-allowed;
+
+   opacity: 0.6;
+
+   transform: none;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.register-footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   gap: 6px;
+
+   flex-wrap: wrap;
+
+   margin-top: 26px;
+
+   color: #94a3b8;
+
+   font-size: 14px;
+   line-height: 1.5;
+
+   text-align: center;
+}
+
+.register-footer button {
+   min-height: 36px;
+
+   padding: 4px 2px;
+
+   border: none;
+
+   background: transparent;
+   color: #6ee7b7;
+
+   font: inherit;
+   font-weight: 600;
+
+   cursor: pointer;
+   touch-action: manipulation;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+.register-footer button:hover {
+   text-decoration: underline;
+}
+
+.register-footer button:focus-visible {
+   outline: 2px solid #6ee7b7;
+   outline-offset: 3px;
+
+   border-radius: 3px;
+}
+
+/* =========================================================
+   TABLETS / SMALL LAPTOPS
+========================================================= */
+
+@media (max-width: 700px) {
+   .register-page {
+      padding: 24px 20px;
+   }
+
+   .register-card {
+      padding: 34px 30px;
+   }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+   .register-page {
+      align-items: center;
+
+      padding: 20px 16px;
+   }
+
+   .register-card {
+      max-width: 100%;
+
+      padding: 28px 22px;
+
+      border-radius: 16px;
+   }
+
+   .register-header {
+      margin-bottom: 26px;
+   }
+
+   .register-header h1 {
+      font-size: 27px;
+   }
+
+   .register-header p:last-child {
+      font-size: 14px;
+   }
+
+   .register-form {
+      gap: 18px;
+   }
+
+   .form-group input,
+   .form-group textarea {
+      font-size: 16px;
+   }
+
+   .form-group input {
+      min-height: 46px;
+   }
+
+   .register-form>button {
+      min-height: 46px;
+
+      font-size: 15px;
+   }
+
+   .register-footer {
+      margin-top: 22px;
+   }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+   .register-page {
+      padding: 12px;
+   }
+
+   .register-card {
+      padding: 24px 16px;
+
+      border-radius: 14px;
+   }
+
+   .register-eyebrow {
+      font-size: 11px;
+   }
+
+   .register-header h1 {
+      font-size: 24px;
+   }
+
+   .register-header p:last-child {
+      font-size: 13px;
+   }
+
+   .register-error,
+   .register-success {
+      padding: 11px 12px;
+
+      font-size: 13px;
+   }
+
+   .field-hint {
+      font-size: 11px;
+   }
+
+   .register-footer {
+      flex-direction: column;
+
+      gap: 2px;
+
+      font-size: 13px;
+   }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+   .register-form>button:hover {
+      background: #6ee7b7;
+
+      transform: none;
+   }
+
+   .register-footer button:hover {
+      text-decoration: none;
+   }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+   .form-group input,
+   .form-group textarea,
+   .register-form>button {
+      transition: none;
+   }
+}
