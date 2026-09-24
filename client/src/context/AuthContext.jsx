@@ -25,9 +25,6 @@ export const AuthProvider = ({ children }) => {
       try {
         const response = await getCurrentUser(token);
 
-        console.log("CURRENT USER RESPONSE:", response);
-        console.log("CURRENT USER:", response.data?.user);
-
         setUser(response.data.user);
       } catch (error) {
         localStorage.removeItem("token");
