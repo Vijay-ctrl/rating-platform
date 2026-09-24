@@ -1,0 +1,329 @@
+/* =========================================================
+   ADMIN ACCOUNT
+========================================================= */
+
+.admin-account {
+   width: 100%;
+   max-width: 1200px;
+
+   margin: 0 auto;
+   box-sizing: border-box;
+
+   min-width: 0;
+   overflow-x: hidden;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-account-header {
+   width: 100%;
+   box-sizing: border-box;
+
+   margin-bottom: 30px;
+
+   min-width: 0;
+}
+
+.admin-account-eyebrow {
+   margin: 0 0 8px;
+
+   color: #6ee7b7;
+
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+   line-height: 1.4;
+
+   overflow-wrap: anywhere;
+}
+
+.admin-account-header h1 {
+   margin: 0;
+
+   color: #f8fafc;
+
+   font-size: 32px;
+   line-height: 1.2;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+.admin-account-header p:last-child {
+   margin: 8px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 15px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+/* =========================================================
+   ACCOUNT CARD
+========================================================= */
+
+.admin-account-card {
+   width: 100%;
+   max-width: 900px;
+
+   box-sizing: border-box;
+
+   border: 1px solid #1e293b;
+   border-radius: 16px;
+
+   background: #111827;
+
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+   overflow: hidden;
+}
+
+/* =========================================================
+   ACCOUNT ROW
+========================================================= */
+
+.admin-account-row {
+   display: grid;
+
+   grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+
+   align-items: center;
+
+   gap: 24px;
+
+   width: 100%;
+   box-sizing: border-box;
+
+   padding: 20px 24px;
+
+   border-bottom: 1px solid #1e293b;
+
+   min-width: 0;
+}
+
+.admin-account-row:last-child {
+   border-bottom: none;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.admin-account-label {
+   min-width: 0;
+
+   color: #94a3b8;
+
+   font-size: 13px;
+   font-weight: 600;
+
+   text-transform: uppercase;
+   letter-spacing: 0.7px;
+   line-height: 1.5;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+/* =========================================================
+   VALUE
+========================================================= */
+
+.admin-account-value {
+   min-width: 0;
+
+   color: #f8fafc;
+
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 1.5;
+
+   text-align: right;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.admin-account-role {
+   justify-self: end;
+
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+
+   max-width: 100%;
+
+   box-sizing: border-box;
+
+   padding: 6px 12px;
+
+   border: 1px solid #3730a3;
+   border-radius: 999px;
+
+   background: #1e1b4b;
+   color: #a5b4fc;
+
+   font-size: 12px;
+   font-weight: 700;
+
+   letter-spacing: 0.7px;
+   line-height: 1.4;
+
+   text-align: center;
+
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+   .admin-account {
+      max-width: 100%;
+   }
+
+   .admin-account-card {
+      max-width: 100%;
+   }
+
+   .admin-account-row {
+      grid-template-columns: minmax(110px, 160px) minmax(0, 1fr);
+
+      gap: 20px;
+
+      padding: 20px;
+   }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+   .admin-account-header {
+      margin-bottom: 24px;
+   }
+
+   .admin-account-header h1 {
+      font-size: 28px;
+   }
+
+   .admin-account-header p:last-child {
+      font-size: 14px;
+   }
+
+   .admin-account-card {
+      border-radius: 14px;
+   }
+
+   .admin-account-row {
+      grid-template-columns: 1fr;
+
+      gap: 8px;
+
+      padding: 18px 20px;
+
+      align-items: flex-start;
+   }
+
+   .admin-account-value {
+      text-align: left;
+   }
+
+   .admin-account-role {
+      justify-self: start;
+   }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+   .admin-account-header {
+      margin-bottom: 20px;
+   }
+
+   .admin-account-header h1 {
+      font-size: 25px;
+   }
+
+   .admin-account-header p:last-child {
+      font-size: 13px;
+   }
+
+   .admin-account-card {
+      border-radius: 13px;
+   }
+
+   .admin-account-row {
+      padding: 16px 18px;
+   }
+
+   .admin-account-label {
+      font-size: 12px;
+   }
+
+   .admin-account-value {
+      font-size: 14px;
+   }
+
+   .admin-account-role {
+      padding: 5px 10px;
+
+      font-size: 11px;
+   }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+   .admin-account-header h1 {
+      font-size: 23px;
+   }
+
+   .admin-account-header p:last-child {
+      font-size: 13px;
+   }
+
+   .admin-account-card {
+      border-radius: 12px;
+   }
+
+   .admin-account-row {
+      padding: 15px 16px;
+   }
+
+   .admin-account-label {
+      font-size: 11px;
+   }
+
+   .admin-account-value {
+      font-size: 13px;
+   }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+   .admin-account,
+   .admin-account-card {
+      scroll-behavior: auto;
+   }
+}

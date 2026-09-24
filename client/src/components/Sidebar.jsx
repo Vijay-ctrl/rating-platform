@@ -22,6 +22,10 @@ const Sidebar = () => {
          label: "Stores",
          path: "/admin/stores",
       },
+      {
+         label: "My Account",
+         path: "/admin/account",
+      },
    ];
 
    const userLinks = [

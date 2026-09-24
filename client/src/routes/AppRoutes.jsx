@@ -14,6 +14,7 @@ import UserStores from "../pages/user/UserStores";
 import OwnerDashboard from "../pages/owner/OwnerDashboard";
 import AddUser from "../pages/admin/AddUser";
 import AddAdmin from "../pages/admin/AddAdmin";
+import AdminAccount from "../pages/admin/AdminAccount";
 
 const AppRoutes = () => {
    return (
@@ -32,6 +33,12 @@ const AppRoutes = () => {
                   path="/admin"
                   element={<AdminDashboard />}
                />
+
+               <Route
+                  path="/admin/account"
+                  element={<AdminAccount />}
+               />
+
                <Route path="/admin/users/add" element={<AddUser />} />
 
                <Route
