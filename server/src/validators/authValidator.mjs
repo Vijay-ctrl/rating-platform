@@ -4,7 +4,10 @@ const passwordSchema = z
    .string()
    .min(8, "Password must be at least 8 characters long")
    .max(16, "Password must not exceed 16 characters")
-   .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+   .regex(
+      /[A-Z]/,
+      "Password must contain at least one uppercase letter"
+   )
    .regex(
       /[^A-Za-z0-9]/,
       "Password must contain at least one special character"
@@ -29,6 +32,13 @@ export const registerSchema = z.object({
       .max(400, "Address must not exceed 400 characters"),
 
    password: passwordSchema,
+
+   role: z.enum(
+      ["ADMIN", "USER"],
+      {
+         message: "Please select a valid account type",
+      }
+   ),
 });
 
 export const loginSchema = z.object({
@@ -40,10 +50,19 @@ export const loginSchema = z.object({
    password: z
       .string()
       .min(1, "Password is required"),
+
+   role: z.enum(
+      ["ADMIN", "USER", "STORE_OWNER"],
+      {
+         message: "Please select a valid login role",
+      }
+   ),
 });
 
 export const updatePasswordSchema = z.object({
-   currentPassword: z.string().min(1, "Current password is required"),
+   currentPassword: z
+      .string()
+      .min(1, "Current password is required"),
 
    newPassword: passwordSchema,
 });

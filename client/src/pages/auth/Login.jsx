@@ -12,6 +12,7 @@ const Login = () => {
    const [formData, setFormData] = useState({
       email: "",
       password: "",
+      role: "",
    });
 
    const [error, setError] = useState("");
@@ -30,10 +31,19 @@ const Login = () => {
       event.preventDefault();
 
       setError("");
+
+      if (!formData.role) {
+         setError("Please select how you want to login.");
+         return;
+      }
+
       setLoading(true);
 
       try {
          const loggedInUser = await login(formData);
+
+         console.log("LOGGED IN USER:", loggedInUser);
+         console.log("SELECTED ROLE:", formData.role);
 
          if (loggedInUser.role === "ADMIN") {
             navigate("/admin");
@@ -56,7 +66,9 @@ const Login = () => {
       <div className="login-page">
          <div className="login-card">
             <div className="login-header">
-               <p className="login-eyebrow">RATING PLATFORM</p>
+               <p className="login-eyebrow">
+                  RATING PLATFORM
+               </p>
 
                <h1>Welcome back</h1>
 
@@ -107,16 +119,50 @@ const Login = () => {
                   />
                </div>
 
+               <div className="form-group">
+                  <label htmlFor="role">
+                     Login as
+                  </label>
+
+                  <select
+                     id="role"
+                     name="role"
+                     value={formData.role}
+                     onChange={handleChange}
+                     required
+                  >
+                     <option value="" disabled>
+                        Select your role
+                     </option>
+
+                     <option value="USER">
+                        User
+                     </option>
+
+                     <option value="ADMIN">
+                        Admin
+                     </option>
+
+                     <option value="STORE_OWNER">
+                        Store Owner
+                     </option>
+                  </select>
+               </div>
+
                <button
                   type="submit"
                   disabled={loading}
                >
-                  {loading ? "Signing in..." : "Sign In"}
+                  {loading
+                     ? "Signing in..."
+                     : "Sign In"}
                </button>
             </form>
 
             <div className="login-footer">
-               <span>Don't have an account?</span>
+               <span>
+                  Don't have an account?
+               </span>
 
                <button
                   type="button"

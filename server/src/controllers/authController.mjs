@@ -1,4 +1,7 @@
-import { registerUser, loginUser, } from "../services/authService.mjs";
+import {
+   registerUser,
+   loginUser,
+} from "../services/authService.mjs";
 
 export const register = async (req, res, next) => {
    try {

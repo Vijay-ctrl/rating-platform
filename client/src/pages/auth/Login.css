@@ -1,4 +1,9 @@
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
 .login-page {
+   width: 100%;
    min-height: 100vh;
    min-height: 100dvh;
 
@@ -8,12 +13,13 @@
 
    box-sizing: border-box;
 
-   padding: 24px;
+   padding: clamp(16px, 4vw, 32px);
 
    background: #0b1220;
 
    overflow-x: hidden;
 }
+
 
 /* =========================================================
    LOGIN CARD
@@ -25,7 +31,7 @@
 
    box-sizing: border-box;
 
-   padding: 40px;
+   padding: clamp(24px, 5vw, 40px);
 
    border: 1px solid #1f2a3d;
    border-radius: 20px;
@@ -33,14 +39,18 @@
    background: #111a2b;
 
    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+
+   overflow: hidden;
 }
+
 
 /* =========================================================
    HEADER
 ========================================================= */
 
 .login-header {
-   margin-bottom: 32px;
+   width: 100%;
+   margin-bottom: 30px;
 }
 
 .login-eyebrow {
@@ -61,7 +71,7 @@
 
    color: #f8fafc;
 
-   font-size: 32px;
+   font-size: clamp(26px, 5vw, 32px);
    line-height: 1.2;
 
    overflow-wrap: anywhere;
@@ -78,12 +88,14 @@
    overflow-wrap: anywhere;
 }
 
+
 /* =========================================================
    ERROR
 ========================================================= */
 
 .login-error {
    width: 100%;
+
    box-sizing: border-box;
 
    margin-bottom: 20px;
@@ -102,6 +114,7 @@
    word-break: break-word;
 }
 
+
 /* =========================================================
    FORM
 ========================================================= */
@@ -110,19 +123,19 @@
    display: flex;
    flex-direction: column;
 
-   gap: 20px;
-
    width: 100%;
+
+   gap: 20px;
 }
 
 .form-group {
    display: flex;
    flex-direction: column;
 
-   gap: 8px;
-
    width: 100%;
    min-width: 0;
+
+   gap: 8px;
 }
 
 .form-group label {
@@ -135,14 +148,20 @@
    overflow-wrap: anywhere;
 }
 
-.form-group input {
+
+/* =========================================================
+   INPUT + SELECT
+========================================================= */
+
+.form-group input,
+.form-group select {
    width: 100%;
    min-width: 0;
    min-height: 46px;
 
    box-sizing: border-box;
 
-   padding: 13px 14px;
+   padding: 12px 14px;
 
    border: 1px solid #334155;
    border-radius: 10px;
@@ -161,22 +180,73 @@
       box-shadow 0.2s ease;
 
    -webkit-appearance: none;
+   appearance: none;
 }
+
+
+/* =========================================================
+   INPUT
+========================================================= */
 
 .form-group input::placeholder {
    color: #64748b;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
    border-color: #6ee7b7;
 
-   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.12);
+   box-shadow:
+      0 0 0 3px rgba(110, 231, 183, 0.12);
 }
 
-.form-group input:disabled {
+.form-group input:disabled,
+.form-group select:disabled {
    cursor: not-allowed;
    opacity: 0.6;
 }
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.form-group select {
+   cursor: pointer;
+
+   padding-right: 42px;
+
+   /*
+      Custom dropdown arrow.
+   */
+   background-image:
+      linear-gradient(45deg, transparent 50%, #94a3b8 50%),
+      linear-gradient(135deg, #94a3b8 50%, transparent 50%);
+
+   background-position:
+      calc(100% - 18px) 20px,
+      calc(100% - 13px) 20px;
+
+   background-size:
+      5px 5px,
+      5px 5px;
+
+   background-repeat: no-repeat;
+}
+
+.form-group select option {
+   background: #0f172a;
+   color: #f8fafc;
+}
+
+.form-group select:invalid {
+   color: #64748b;
+}
+
+.form-group select option[value=""] {
+   color: #64748b;
+}
+
 
 /* =========================================================
    LOGIN BUTTON
@@ -189,7 +259,7 @@
    box-sizing: border-box;
 
    margin-top: 4px;
-   padding: 13px 18px;
+   padding: 12px 18px;
 
    border: none;
    border-radius: 10px;
@@ -230,11 +300,11 @@
 
 .login-form>button:disabled {
    cursor: not-allowed;
-
    opacity: 0.6;
 
    transform: none;
 }
+
 
 /* =========================================================
    FOOTER
@@ -242,12 +312,12 @@
 
 .login-footer {
    display: flex;
-   justify-content: center;
    align-items: center;
-
-   gap: 6px;
+   justify-content: center;
 
    flex-wrap: wrap;
+
+   gap: 6px;
 
    margin-top: 26px;
 
@@ -289,8 +359,9 @@
    border-radius: 3px;
 }
 
+
 /* =========================================================
-   TABLETS / SMALL LAPTOPS
+   TABLETS
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -299,9 +370,14 @@
    }
 
    .login-card {
-      padding: 34px 30px;
+      max-width: 440px;
+
+      padding: 32px 28px;
+
+      border-radius: 18px;
    }
 }
+
 
 /* =========================================================
    MOBILE
@@ -315,6 +391,7 @@
    }
 
    .login-card {
+      width: 100%;
       max-width: 100%;
 
       padding: 28px 22px;
@@ -338,12 +415,25 @@
       gap: 18px;
    }
 
-   .form-group input {
+   .form-group input,
+   .form-group select {
       min-height: 46px;
 
       padding: 12px 13px;
 
+      /*
+         Prevents automatic zoom on
+         many mobile browsers.
+      */
       font-size: 16px;
+   }
+
+   .form-group select {
+      padding-right: 40px;
+
+      background-position:
+         calc(100% - 17px) 20px,
+         calc(100% - 12px) 20px;
    }
 
    .login-form>button {
@@ -357,11 +447,12 @@
    }
 }
 
+
 /* =========================================================
-   VERY SMALL PHONES
+   SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
    .login-page {
       padding: 12px;
    }
@@ -390,6 +481,18 @@
       font-size: 13px;
    }
 
+   .form-group input,
+   .form-group select {
+      min-height: 45px;
+
+      padding-left: 12px;
+      padding-right: 12px;
+   }
+
+   .form-group select {
+      padding-right: 36px;
+   }
+
    .login-footer {
       flex-direction: column;
 
@@ -398,6 +501,46 @@
       font-size: 13px;
    }
 }
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 320px) {
+   .login-page {
+      padding: 8px;
+   }
+
+   .login-card {
+      padding: 20px 14px;
+   }
+
+   .login-header h1 {
+      font-size: 23px;
+   }
+
+   .login-form {
+      gap: 16px;
+   }
+
+   .form-group input,
+   .form-group select {
+      padding: 11px 12px;
+
+      font-size: 16px;
+   }
+
+   .form-group select {
+      padding-right: 34px;
+   }
+
+   .login-form>button {
+      padding-left: 14px;
+      padding-right: 14px;
+   }
+}
+
 
 /* =========================================================
    TOUCH DEVICES
@@ -415,6 +558,7 @@
    }
 }
 
+
 /* =========================================================
    REDUCED MOTION
 ========================================================= */
@@ -422,6 +566,7 @@
 @media (prefers-reduced-motion: reduce) {
 
    .form-group input,
+   .form-group select,
    .login-form>button {
       transition: none;
    }

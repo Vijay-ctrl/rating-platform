@@ -1,3 +1,7 @@
+/* =========================================================
+   REGISTER PAGE
+========================================================= */
+
 .register-page {
    min-height: 100vh;
    min-height: 100dvh;
@@ -8,12 +12,13 @@
 
    box-sizing: border-box;
 
-   padding: 32px 24px;
+   padding: 24px;
 
    background: #0b1220;
 
    overflow-x: hidden;
 }
+
 
 /* =========================================================
    REGISTER CARD
@@ -21,11 +26,11 @@
 
 .register-card {
    width: 100%;
-   max-width: 500px;
+   max-width: 440px;
 
    box-sizing: border-box;
 
-   padding: 40px;
+   padding: 36px 40px;
 
    border: 1px solid #1f2a3d;
    border-radius: 20px;
@@ -33,14 +38,17 @@
    background: #111a2b;
 
    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+
+   overflow: hidden;
 }
+
 
 /* =========================================================
    HEADER
 ========================================================= */
 
 .register-header {
-   margin-bottom: 30px;
+   margin-bottom: 26px;
 }
 
 .register-eyebrow {
@@ -50,6 +58,7 @@
 
    font-size: 12px;
    font-weight: 700;
+
    letter-spacing: 0.14em;
    line-height: 1.4;
 
@@ -57,7 +66,7 @@
 }
 
 .register-header h1 {
-   margin: 0 0 10px;
+   margin: 0 0 8px;
 
    color: #f8fafc;
 
@@ -72,27 +81,30 @@
 
    color: #94a3b8;
 
-   font-size: 15px;
-   line-height: 1.6;
+   font-size: 14px;
+   line-height: 1.55;
 
    overflow-wrap: anywhere;
 }
 
+
 /* =========================================================
-   MESSAGES
+   ERROR / SUCCESS
 ========================================================= */
 
 .register-error,
 .register-success {
    width: 100%;
+
    box-sizing: border-box;
 
-   margin-bottom: 20px;
-   padding: 12px 14px;
+   margin-bottom: 18px;
+
+   padding: 11px 13px;
 
    border-radius: 10px;
 
-   font-size: 14px;
+   font-size: 13px;
    line-height: 1.5;
 
    overflow-wrap: anywhere;
@@ -103,6 +115,7 @@
    border: 1px solid #7f1d1d;
 
    background: #450a0a;
+
    color: #fecaca;
 }
 
@@ -110,8 +123,10 @@
    border: 1px solid #166534;
 
    background: #052e16;
+
    color: #bbf7d0;
 }
+
 
 /* =========================================================
    FORM
@@ -121,7 +136,7 @@
    display: flex;
    flex-direction: column;
 
-   gap: 19px;
+   gap: 16px;
 
    width: 100%;
 }
@@ -130,30 +145,41 @@
    display: flex;
    flex-direction: column;
 
-   gap: 8px;
+   gap: 7px;
 
    width: 100%;
+
    min-width: 0;
 }
+
+
+/* =========================================================
+   LABEL
+========================================================= */
 
 .form-group label {
    color: #e2e8f0;
 
-   font-size: 14px;
+   font-size: 13px;
    font-weight: 600;
+
    line-height: 1.4;
 
    overflow-wrap: anywhere;
 }
 
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================= */
+
 .form-group input,
+.form-group select,
 .form-group textarea {
    width: 100%;
    min-width: 0;
 
    box-sizing: border-box;
-
-   padding: 13px 14px;
 
    border: 1px solid #334155;
    border-radius: 10px;
@@ -163,9 +189,8 @@
    background: #0f172a;
    color: #f8fafc;
 
-   font-size: 15px;
+   font-size: 14px;
    font-family: inherit;
-   line-height: 1.4;
 
    transition:
       border-color 0.2s ease,
@@ -174,36 +199,95 @@
    -webkit-appearance: none;
 }
 
+
+/* =========================================================
+   INPUT
+========================================================= */
+
 .form-group input {
-   min-height: 46px;
+   min-height: 44px;
+
+   padding: 11px 13px;
+
+   line-height: 1.4;
 }
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.form-group select {
+   min-height: 44px;
+
+   padding: 11px 38px 11px 13px;
+
+   line-height: 1.4;
+
+   cursor: pointer;
+
+   appearance: auto;
+}
+
+.form-group select option {
+   background: #0f172a;
+   color: #f8fafc;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
 
 .form-group textarea {
-   min-height: 90px;
+   min-height: 82px;
 
-   resize: vertical;
+   padding: 11px 13px;
 
    line-height: 1.5;
+
+   resize: vertical;
 }
+
+
+/* =========================================================
+   PLACEHOLDERS
+========================================================= */
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
    color: #64748b;
+
+   opacity: 1;
 }
 
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
    border-color: #6ee7b7;
 
-   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.12);
+   box-shadow:
+      0 0 0 3px rgba(110, 231, 183, 0.12);
 }
 
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
 .form-group input:disabled,
+.form-group select:disabled,
 .form-group textarea:disabled {
    cursor: not-allowed;
 
    opacity: 0.6;
 }
+
 
 /* =========================================================
    FIELD HINT
@@ -212,24 +296,28 @@
 .field-hint {
    color: #64748b;
 
-   font-size: 12px;
+   font-size: 11px;
    line-height: 1.4;
 
    overflow-wrap: anywhere;
+   word-break: break-word;
 }
 
+
 /* =========================================================
-   REGISTER BUTTON
+   CREATE ACCOUNT BUTTON
 ========================================================= */
 
 .register-form>button {
    width: 100%;
-   min-height: 46px;
+
+   min-height: 44px;
 
    box-sizing: border-box;
 
-   margin-top: 5px;
-   padding: 13px 18px;
+   margin-top: 2px;
+
+   padding: 11px 16px;
 
    border: none;
    border-radius: 10px;
@@ -237,12 +325,14 @@
    background: #6ee7b7;
    color: #06251a;
 
-   font-size: 15px;
+   font-size: 14px;
    font-weight: 700;
    font-family: inherit;
+
    line-height: 1.4;
 
    cursor: pointer;
+
    touch-action: manipulation;
 
    transition:
@@ -265,6 +355,7 @@
 
 .register-form>button:focus-visible {
    outline: 2px solid #6ee7b7;
+
    outline-offset: 3px;
 }
 
@@ -276,12 +367,14 @@
    transform: none;
 }
 
+
 /* =========================================================
    FOOTER
 ========================================================= */
 
 .register-footer {
    display: flex;
+
    justify-content: center;
    align-items: center;
 
@@ -289,30 +382,32 @@
 
    flex-wrap: wrap;
 
-   margin-top: 26px;
+   margin-top: 22px;
 
    color: #94a3b8;
 
-   font-size: 14px;
+   font-size: 13px;
    line-height: 1.5;
 
    text-align: center;
 }
 
 .register-footer button {
-   min-height: 36px;
+   min-height: 32px;
 
-   padding: 4px 2px;
+   padding: 3px 2px;
 
    border: none;
 
    background: transparent;
+
    color: #6ee7b7;
 
    font: inherit;
    font-weight: 600;
 
    cursor: pointer;
+
    touch-action: manipulation;
 
    -webkit-tap-highlight-color: transparent;
@@ -324,10 +419,12 @@
 
 .register-footer button:focus-visible {
    outline: 2px solid #6ee7b7;
+
    outline-offset: 3px;
 
    border-radius: 3px;
 }
+
 
 /* =========================================================
    TABLETS / SMALL LAPTOPS
@@ -335,35 +432,43 @@
 
 @media (max-width: 700px) {
    .register-page {
-      padding: 24px 20px;
+      padding: 20px;
    }
 
    .register-card {
-      padding: 34px 30px;
+      padding: 32px 30px;
    }
 }
+
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 560px) {
+@media (max-width: 520px) {
    .register-page {
-      align-items: center;
+      align-items: flex-start;
 
-      padding: 20px 16px;
+      min-height: 100dvh;
+
+      padding: 16px;
+
+      overflow-x: hidden;
+      overflow-y: auto;
    }
 
    .register-card {
       max-width: 100%;
 
-      padding: 28px 22px;
+      margin: auto 0;
+
+      padding: 26px 20px;
 
       border-radius: 16px;
    }
 
    .register-header {
-      margin-bottom: 26px;
+      margin-bottom: 22px;
    }
 
    .register-header h1 {
@@ -371,79 +476,184 @@
    }
 
    .register-header p:last-child {
-      font-size: 14px;
+      font-size: 13px;
    }
 
    .register-form {
-      gap: 18px;
+      gap: 14px;
+   }
+
+   .form-group {
+      gap: 6px;
+   }
+
+   .form-group label {
+      font-size: 13px;
    }
 
    .form-group input,
+   .form-group select,
    .form-group textarea {
       font-size: 16px;
    }
 
-   .form-group input {
-      min-height: 46px;
+   .form-group input,
+   .form-group select {
+      min-height: 45px;
+   }
+
+   .form-group textarea {
+      min-height: 78px;
+   }
+
+   .field-hint {
+      font-size: 10px;
    }
 
    .register-form>button {
-      min-height: 46px;
+      min-height: 45px;
 
-      font-size: 15px;
+      margin-top: 3px;
+
+      font-size: 14px;
    }
 
    .register-footer {
-      margin-top: 22px;
+      margin-top: 20px;
+
+      font-size: 13px;
    }
 }
+
 
 /* =========================================================
    VERY SMALL PHONES
 ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
    .register-page {
-      padding: 12px;
+      padding: 10px;
    }
 
    .register-card {
-      padding: 24px 16px;
+      padding: 22px 15px;
 
       border-radius: 14px;
    }
 
+   .register-header {
+      margin-bottom: 19px;
+   }
+
    .register-eyebrow {
-      font-size: 11px;
+      margin-bottom: 7px;
+
+      font-size: 10px;
    }
 
    .register-header h1 {
+      margin-bottom: 7px;
+
       font-size: 24px;
    }
 
    .register-header p:last-child {
-      font-size: 13px;
+      font-size: 12px;
+
+      line-height: 1.45;
    }
 
    .register-error,
    .register-success {
-      padding: 11px 12px;
+      margin-bottom: 14px;
 
-      font-size: 13px;
+      padding: 10px 11px;
+
+      font-size: 12px;
+   }
+
+   .register-form {
+      gap: 12px;
+   }
+
+   .form-group {
+      gap: 5px;
+   }
+
+   .form-group label {
+      font-size: 12px;
+   }
+
+   .form-group input,
+   .form-group select {
+      min-height: 43px;
+
+      padding: 10px 11px;
+
+      font-size: 16px;
+   }
+
+   .form-group textarea {
+      min-height: 72px;
+
+      padding: 10px 11px;
+
+      font-size: 16px;
    }
 
    .field-hint {
-      font-size: 11px;
+      font-size: 9.5px;
    }
 
-   .register-footer {
-      flex-direction: column;
+   .register-form>button {
+      min-height: 43px;
 
-      gap: 2px;
+      padding: 10px 14px;
 
       font-size: 13px;
    }
+
+   .register-footer {
+      margin-top: 17px;
+
+      font-size: 12px;
+   }
 }
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 320px) {
+   .register-page {
+      padding: 8px;
+   }
+
+   .register-card {
+      padding: 20px 13px;
+   }
+
+   .register-header h1 {
+      font-size: 22px;
+   }
+
+   .register-form {
+      gap: 11px;
+   }
+
+   .form-group input,
+   .form-group select,
+   .form-group textarea {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
+   .field-hint {
+      font-size: 9px;
+   }
+}
+
 
 /* =========================================================
    TOUCH DEVICES
@@ -461,6 +671,7 @@
    }
 }
 
+
 /* =========================================================
    REDUCED MOTION
 ========================================================= */
@@ -468,6 +679,7 @@
 @media (prefers-reduced-motion: reduce) {
 
    .form-group input,
+   .form-group select,
    .form-group textarea,
    .register-form>button {
       transition: none;

@@ -14,6 +14,7 @@ const Register = () => {
       email: "",
       address: "",
       password: "",
+      role: "",
    });
 
    const [error, setError] = useState("");
@@ -34,6 +35,12 @@ const Register = () => {
 
       setError("");
       setSuccess("");
+
+      if (!formData.role) {
+         setError("Please select an account type.");
+         return;
+      }
+
       setLoading(true);
 
       try {
@@ -48,6 +55,7 @@ const Register = () => {
             email: "",
             address: "",
             password: "",
+            role: "",
          });
       } catch (error) {
          const validationErrors =
@@ -77,7 +85,7 @@ const Register = () => {
                <h1>Create your account</h1>
 
                <p>
-                  Join the platform and start rating stores.
+                  Create an account to access the platform.
                </p>
             </div>
 
@@ -97,6 +105,32 @@ const Register = () => {
                className="register-form"
                onSubmit={handleSubmit}
             >
+               <div className="form-group">
+                  <label htmlFor="role">
+                     Create account as
+                  </label>
+
+                  <select
+                     id="role"
+                     name="role"
+                     value={formData.role}
+                     onChange={handleChange}
+                     required
+                  >
+                     <option value="" disabled>
+                        Select account type
+                     </option>
+
+                     <option value="USER">
+                        User
+                     </option>
+
+                     <option value="ADMIN">
+                        Admin
+                     </option>
+                  </select>
+               </div>
+
                <div className="form-group">
                   <label htmlFor="name">
                      Full Name
@@ -186,7 +220,9 @@ const Register = () => {
             </form>
 
             <div className="register-footer">
-               <span>Already have an account?</span>
+               <span>
+                  Already have an account?
+               </span>
 
                <button
                   type="button"
