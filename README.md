@@ -1,153 +1,305 @@
-# Rating Platform
+# ⭐ Rating Platform
 
-A full-stack role-based store rating platform built as a Full-Stack Intern Coding Challenge.
+A full-stack role-based store rating platform built as a **Full-Stack Intern Coding Challenge**.
 
-The application provides a single authentication system with role-based access for **System Administrators, Normal Users, and Store Owners**. Users can browse stores and submit ratings, administrators can manage users and stores, and store owners can monitor their store ratings.
+The application provides a complete role-based ecosystem for **System Administrators, Normal Users, and Store Owners**. Users can browse stores and submit ratings, administrators can manage users and stores, and store owners can monitor ratings and customer activity for their stores.
+
+The project is built with **React, Node.js, Express.js, PostgreSQL, Prisma, JWT, bcrypt, and Zod**, and is deployed using **Render**.
+
+---
 
 ## 🚀 Project Status
 
-**Development:** Complete
-**Deployment:** In Progress
+| Component | Status |
+|---|---|
+| Frontend | ✅ Complete |
+| Backend | ✅ Complete |
+| Database | ✅ Complete |
+| Authentication | ✅ Complete |
+| Role-Based Authorization | ✅ Complete |
+| Rating System | ✅ Complete |
+| Admin Management | ✅ Complete |
+| Store Owner Dashboard | ✅ Complete |
+| Responsive UI | ✅ Complete |
+| Testing | ✅ Complete |
+| Deployment | ✅ Live |
 
-* Frontend: React + Vite
-* Backend: Node.js + Express.js
-* Database: PostgreSQL
-* ORM: Prisma
-* Authentication: JWT
-* Validation: Zod
+### 🌐 Live Application
+
+**Frontend / Web Application**
+
+https://rating-platform-1-70ga.onrender.com
+
+**Backend API**
+
+https://rating-platform-05rv.onrender.com
+
+**GitHub Repository**
+
+https://github.com/Vijay-ctrl/rating-platform
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 🔐 Authentication & Authorization
+## 🔐 Authentication & Authorization
 
-* User registration and login
-* JWT-based authentication
-* Role-based access control
-* Protected routes
-* Password update functionality
-* Secure password hashing using bcrypt
-* Backend validation using Zod
+- User registration and login
+- Role-based login
+- JWT-based authentication
+- Protected routes
+- Backend role-based authorization
+- Password update functionality
+- Secure password hashing using bcrypt
+- Backend validation using Zod
+- Separate dashboards for each role
 
-### 👑 System Administrator
+### Supported Roles
+
+```text
+ADMIN
+USER
+STORE_OWNER
+
+
+👑 System Administrator
+
+Administrators have complete management access to the platform.
+
+Dashboard
 
 Administrators can:
 
-* View dashboard statistics
-* Add normal users
-* Add administrators
-* Add store owners
-* Add stores
-* View and search users
-* Filter users by name, email, address, and role
-* Sort users
-* View individual user details
-* View store owner ratings
-* View and search stores
-* Sort stores
-* Logout
+View platform statistics
+View total users
+View total stores
+View total ratings
+Monitor platform activity
+User Management
 
-### 👤 Normal User
+Administrators can:
 
-Normal users can:
+Add normal users
+Add administrators
+Add store owners
+View all users
+Search users
+Filter users by:
+Name
+Email
+Address
+Role
+Sort users
+View individual user details
+View user roles
+View account information
+Store Management
 
-* Create an account
-* Login
-* View all stores
-* Search stores by name
-* Search stores by address
-* View overall store ratings
-* View their submitted rating
-* Submit a rating from 1–5
-* Modify an existing rating
-* Update their password
-* Logout
+Administrators can:
 
-### 🏪 Store Owner
+View all stores
+Search stores
+Sort stores
+Add new stores
+Assign a store owner to a store
+View store information
+View store owner information
+View store ratings
+Administration
+Secure admin dashboard
+Role-protected admin routes
+Logout functionality
+Account management
+Password update functionality
+👤 Normal User
+
+Normal users can interact with stores and submit ratings.
+
+Account
+
+Users can:
+
+Create an account
+Login
+Logout
+View their account
+Update their password
+Store Discovery
+
+Users can:
+
+View all available stores
+Search stores by name
+Search stores by address
+View store information
+View overall store ratings
+Rating System
+
+Users can:
+
+Submit a rating from 1 to 5
+View their submitted rating
+Modify an existing rating
+Submit only one rating per store
+
+The database prevents duplicate user-store ratings through a unique constraint.
+
+🏪 Store Owner
+
+Store owners have access to their store-specific dashboard.
+
+Store Dashboard
 
 Store owners can:
 
-* Login
-* View their store
-* View average rating
-* View total number of ratings
-* View users who submitted ratings
-* Update their password
-* Logout
+Login
+View their assigned store
+View store name
+View store address
+View average rating
+View total number of ratings
+View number of customers who rated the store
+Customer Activity
 
----
+Store owners can:
 
-## 🧰 Tech Stack
+View users who submitted ratings
+Monitor customer rating activity
+View rating-related statistics
+Account Security
 
-### Frontend
+Store owners can:
 
-* React
-* Vite
-* React Router DOM
-* Axios
-* CSS
+Update their password
+Logout
 
-### Backend
+Store owners cannot access administrator or normal-user protected resources.
 
-* Node.js
-* Express.js
-* JWT
-* bcryptjs
-* Zod
+🧰 Tech Stack
+Frontend
+React
+Vite
+React Router DOM
+Axios
+CSS
+JavaScript
+Backend
+Node.js
+Express.js
+JWT
+bcryptjs
+Zod
+REST API
+Database
+PostgreSQL
+Prisma ORM
+Prisma PostgreSQL Adapter
+Deployment
+Render Static Site — Frontend
+Render Web Service — Backend
+PostgreSQL — Database
+🏗️ System Architecture
+                         ┌─────────────────────────┐
+                         │        End User         │
+                         │                         │
+                         │ Admin / User / Owner    │
+                         └────────────┬────────────┘
+                                      │
+                                      │ HTTPS
+                                      ▼
+                         ┌─────────────────────────┐
+                         │        Render           │
+                         │     Static Website      │
+                         │                         │
+                         │     React + Vite        │
+                         └────────────┬────────────┘
+                                      │
+                                      │ Axios / REST API
+                                      ▼
+                         ┌─────────────────────────┐
+                         │        Render           │
+                         │      Web Service        │
+                         │                         │
+                         │    Express.js API       │
+                         ├─────────────────────────┤
+                         │ Routes                  │
+                         │ Controllers             │
+                         │ Services                │
+                         │ Middleware              │
+                         │ Validators              │
+                         │ JWT Authentication      │
+                         └────────────┬────────────┘
+                                      │
+                                      │ Prisma ORM
+                                      ▼
+                         ┌─────────────────────────┐
+                         │      PostgreSQL         │
+                         │                         │
+                         │ Users                   │
+                         │ Stores                  │
+                         │ Ratings                 │
+                         └─────────────────────────┘
+🔄 Application Flow
+                    ┌───────────────┐
+                    │     Login     │
+                    └───────┬───────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │ Express API       │
+                  │ Validate Request  │
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │ bcrypt Password   │
+                  │ Verification      │
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │ Generate JWT      │
+                  │ userId + role     │
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │ React Frontend    │
+                  │ Stores Token      │
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │ Protected Request │
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │ JWT Middleware    │
+                  └─────────┬─────────┘
+                            │
+                            ▼
+                  ┌───────────────────┐
+                  │ Role Middleware   │
+                  └─────────┬─────────┘
+                            │
+             ┌──────────────┼──────────────┐
+             ▼              ▼              ▼
+          ADMIN           USER        STORE_OWNER
+             │              │              │
+             ▼              ▼              ▼
+        Admin Panel     User Panel     Owner Panel
 
-### Database
+Role authorization is enforced on the backend rather than relying only on frontend navigation.
 
-* PostgreSQL
-* Prisma ORM
-* Prisma PostgreSQL Adapter
+🗄️ Database Design
 
-### Planned Deployment
+The application uses three primary models:
 
-* **Frontend:** Vercel
-* **Backend:** Render
-* **Database:** Neon PostgreSQL
-
----
-
-## 🏗️ Architecture
-
-```text
-┌──────────────────────┐
-│      React + Vite    │
-│       Frontend       │
-└──────────┬───────────┘
-           │
-           │ Axios / REST API
-           ▼
-┌──────────────────────┐
-│      Express.js      │
-│        Backend       │
-├──────────────────────┤
-│ Routes               │
-│ Controllers          │
-│ Services             │
-│ Middleware           │
-│ Validators           │
-└──────────┬───────────┘
-           │
-           │ Prisma ORM
-           ▼
-┌──────────────────────┐
-│      PostgreSQL      │
-│       Database       │
-└──────────────────────┘
-```
-
----
-
-## 🗄️ Database Design
-
-The application uses three main models.
-
-### User
-
-```text
+User
+Store
+Rating
+User
 User
 ├── id
 ├── name
@@ -157,19 +309,13 @@ User
 ├── role
 ├── createdAt
 └── updatedAt
-```
 
 Supported roles:
 
-```text
 ADMIN
 USER
 STORE_OWNER
-```
-
-### Store
-
-```text
+Store
 Store
 ├── id
 ├── name
@@ -178,13 +324,10 @@ Store
 ├── ownerId
 ├── createdAt
 └── updatedAt
-```
 
-Each store has one store owner.
+Each store is associated with one store owner.
 
-### Rating
-
-```text
+Rating
 Rating
 ├── id
 ├── rating
@@ -192,86 +335,91 @@ Rating
 ├── storeId
 ├── createdAt
 └── updatedAt
-```
 
 A user can submit only one rating for a particular store.
 
-The database enforces this through:
+The database enforces this relationship using:
 
-```text
 @@unique([userId, storeId])
-```
 
----
+This allows a user to update an existing rating instead of creating duplicate ratings for the same store.
 
-## 🔒 Validation
+🔒 Validation
 
-The application implements the challenge validation requirements on the backend.
+The application implements validation requirements on the backend using Zod.
 
-| Field    | Requirement                      |
-| -------- | -------------------------------- |
-| Name     | 20–60 characters                 |
-| Address  | Maximum 400 characters           |
-| Password | 8–16 characters                  |
-| Password | At least one uppercase character |
-| Password | At least one special character   |
-| Email    | Valid email format               |
-| Rating   | Integer from 1–5                 |
+Field	Requirement
+Name	20–60 characters
+Address	Maximum 400 characters
+Password	8–16 characters
+Password	At least one uppercase character
+Password	At least one special character
+Email	Valid email format
+Rating	Integer from 1–5
+Role	ADMIN / USER / STORE_OWNER
 
-Validation is implemented using **Zod** and is enforced independently of frontend validation.
+Backend validation is independent of frontend validation, ensuring that invalid requests cannot bypass validation by directly calling the API.
 
----
-
-## 🔑 Authentication Flow
-
-```text
+🔑 Authentication Flow
 User
  │
  │ Login
  ▼
 Express API
  │
- │ Validate credentials
+ │ Validate email/password/role
  ▼
 bcrypt password verification
  │
  ▼
 JWT generated
  │
+ │ userId + role
  ▼
-Frontend stores token
+Frontend
+ │
+ │ Token
+ ▼
+Protected API Request
  │
  ▼
-Protected API request
+JWT Authentication Middleware
  │
  ▼
-JWT middleware
+Role Authorization Middleware
  │
  ▼
-Role middleware
+Authorized Controller
  │
  ▼
-Authorized resource
-```
+Service Layer
+ │
+ ▼
+Prisma ORM
+ │
+ ▼
+PostgreSQL
+🔐 Security
 
-Role authorization is enforced on the backend.
+The application implements several security measures:
 
----
-
-## 🔌 API Endpoints
-
-### Authentication
-
-```text
+Passwords are never stored as plain text
+Passwords are hashed using bcrypt
+JWT is used for authentication
+Protected API routes require authentication
+Role-based middleware restricts resources
+Backend validation using Zod
+Database constraints prevent duplicate ratings
+Environment variables are excluded from Git
+Database credentials are never committed
+Users cannot access resources belonging to unauthorized roles
+🔌 API Endpoints
+Authentication
 POST   /api/auth/register
 POST   /api/auth/login
 GET    /api/auth/me
 PATCH  /api/auth/password
-```
-
-### Administrator
-
-```text
+Administrator
 GET    /api/admin/dashboard
 
 GET    /api/admin/users
@@ -283,37 +431,23 @@ POST   /api/admin/store-owners
 
 GET    /api/admin/stores
 POST   /api/admin/stores
-```
-
-### Normal User
-
-```text
+Normal User
 GET    /api/user/stores
-```
-
-### Ratings
-
-```text
+Ratings
 POST   /api/ratings
-```
 
-The rating endpoint supports both submitting a new rating and modifying an existing rating.
+The rating endpoint supports:
 
-### Store Owner
-
-```text
+Creating a new rating
+Updating an existing rating
+Store Owner
 GET    /api/owner/dashboard
-```
-
----
-
-## 📁 Project Structure
-
-```text
+📁 Project Structure
 rating-platform/
 │
 ├── client/
 │   ├── public/
+│   │
 │   └── src/
 │       ├── components/
 │       ├── context/
@@ -323,6 +457,7 @@ rating-platform/
 │       │   ├── auth/
 │       │   ├── owner/
 │       │   └── user/
+│       │
 │       ├── routes/
 │       ├── services/
 │       └── utils/
@@ -331,6 +466,7 @@ rating-platform/
 │   ├── prisma/
 │   │   ├── migrations/
 │   │   └── schema.prisma
+│   │
 │   └── src/
 │       ├── config/
 │       ├── controllers/
@@ -341,203 +477,549 @@ rating-platform/
 │       ├── utils/
 │       └── validators/
 │
+├── docs/
+│   └── screenshots/
+│
 ├── .gitignore
 └── README.md
-```
+🧪 Testing
 
----
+The application has been tested across the major application workflows.
 
-## 🧪 Testing
+Authentication
+Registration
+Login
+JWT authentication
+Role-based login
+Invalid credentials
+Invalid role selection
+Protected routes
+Logout
+Administrator
+Admin dashboard
+User creation
+Admin creation
+Store owner creation
+Store creation
+User search
+User filtering
+User sorting
+Store search
+Store sorting
+Store owner assignment
+Normal User
+Store listing
+Store search
+Rating submission
+Rating modification
+Rating validation
+Customer activity generation
+Store Owner
+Owner login
+Owner dashboard
+Store information
+Average rating
+Total ratings
+Customer activity
+Password update
+Security & Validation
+Frontend validation
+Backend validation
+JWT authorization
+Role authorization
+Password hashing
+Duplicate rating prevention
+Responsive Testing
 
-The application has been tested across:
+The interface was tested across different screen sizes including:
 
-* Registration
-* Login
-* JWT authentication
-* Role-based authorization
-* Admin dashboard
-* User management
-* Store management
-* Store owner dashboard
-* Rating submission
-* Rating modification
-* Search
-* Filtering
-* Sorting
-* Password updates
-* Frontend validation
-* Backend validation
-* Boundary-value validation
-* Responsive layouts
+Desktop
+Laptop
+Tablet
+Mobile
+🧪 Boundary-Value Testing
 
-Boundary cases tested include:
+The following boundary cases were tested:
 
-```text
-Name:       20 / 60 characters
-Address:    400 characters
-Password:   8 / 16 characters
-Rating:     1 / 5
-```
+Name
+20 characters → Valid
+60 characters → Valid
 
-The frontend production build also completes successfully using Vite.
+Address
+400 characters → Valid
 
----
+Password
+8 characters → Valid
+16 characters → Valid
 
-## 🛡️ Security
+Rating
+1 → Valid
+5 → Valid
 
-* Passwords are hashed using bcrypt
-* JWT protects authenticated API routes
-* Role-based middleware restricts access
-* Backend validation prevents invalid requests
-* Database constraints prevent duplicate ratings
-* Environment variables are excluded from Git
-* Database credentials are never committed
+Invalid values outside the defined constraints are rejected by backend validation.
 
----
+⭐ Rating Flow
 
-## ⚙️ Local Setup
+The complete rating workflow is:
 
-### 1. Clone the repository
+Normal User
+     │
+     ▼
+Login
+     │
+     ▼
+View Stores
+     │
+     ▼
+Search Store
+     │
+     ▼
+Select Store
+     │
+     ▼
+Submit Rating 1–5
+     │
+     ▼
+Rating Stored
+     │
+     ▼
+Rating Aggregated
+     │
+     ├───────────────┐
+     ▼               ▼
+User Dashboard   Owner Dashboard
+                     │
+                     ▼
+              Average Rating
+                     │
+                     ▼
+              Customer Activity
 
-```bash
+A user can later modify their existing rating.
+
+🏪 Store Owner Flow
+ADMIN
+ │
+ ▼
+Create Store Owner
+ │
+ ▼
+STORE_OWNER Account
+ │
+ ▼
+Create Store
+ │
+ ▼
+Assign Store Owner
+ │
+ ▼
+Store Owner Login
+ │
+ ▼
+/owner
+ │
+ ▼
+Owner Dashboard
+ │
+ ├── Store Information
+ ├── Average Rating
+ ├── Total Ratings
+ └── Customer Activity
+👑 Administrator Flow
+ADMIN LOGIN
+     │
+     ▼
+ADMIN DASHBOARD
+     │
+     ├───────────────┐
+     │               │
+     ▼               ▼
+  USERS            STORES
+     │               │
+     ├── Search      ├── Search
+     ├── Filter      ├── Sort
+     ├── Sort        └── Create Store
+     │
+     ├── Create User
+     ├── Create Admin
+     └── Create Store Owner
+👤 User Flow
+REGISTER
+   │
+   ▼
+LOGIN
+   │
+   ▼
+USER DASHBOARD
+   │
+   ▼
+VIEW STORES
+   │
+   ├── Search by Name
+   ├── Search by Address
+   │
+   ▼
+SELECT STORE
+   │
+   ▼
+SUBMIT RATING
+   │
+   ▼
+RATING SAVED
+   │
+   ▼
+MODIFY RATING
+🌐 Deployment
+
+The application is deployed using Render.
+
+Frontend
+
+The React + Vite application is deployed as a Render Static Site.
+
+Render Static Site
+        │
+        ▼
+React + Vite Frontend
+
+Live URL:
+
+https://rating-platform-1-70ga.onrender.com
+
+Backend
+
+The Express.js application is deployed as a Render Web Service.
+
+Render Web Service
+        │
+        ▼
+Node.js + Express API
+
+Backend URL:
+
+https://rating-platform-05rv.onrender.com
+
+The frontend communicates with the backend using Axios and the deployed API base URL.
+
+Database
+
+The backend communicates with PostgreSQL through Prisma ORM.
+
+React
+  │
+  │ HTTPS
+  ▼
+Render Frontend
+  │
+  │ REST API
+  ▼
+Render Backend
+  │
+  │ Prisma
+  ▼
+PostgreSQL
+⚙️ Local Setup
+1. Clone the Repository
 git clone https://github.com/Vijay-ctrl/rating-platform.git
+
 cd rating-platform
-```
-
-### 2. Install frontend dependencies
-
-```bash
+2. Install Frontend Dependencies
 cd client
-npm install
-```
 
-### 3. Install backend dependencies
+npm install
+3. Install Backend Dependencies
 
 Open another terminal:
 
-```bash
 cd server
-npm install
-```
 
-### 4. Configure environment variables
+npm install
+4. Configure Environment Variables
 
 Create:
 
-```text
 server/.env
-```
 
 Add:
 
-```env
 DATABASE_URL="your_postgresql_connection_string"
+
 JWT_SECRET="your_secure_jwt_secret"
+
 PORT=5000
-```
 
-Do not commit `.env`.
+Do not commit .env to Git.
 
-### 5. Start the backend
+5. Run Database Setup
 
-```bash
+From the server directory:
+
+npx prisma generate
+
+Run migrations if required:
+
+npx prisma migrate dev
+6. Start Backend
 cd server
+
 npm start
-```
 
 Backend:
 
-```text
 http://localhost:5000
-```
+7. Start Frontend
 
-### 6. Start the frontend
+Open another terminal:
 
-In another terminal:
-
-```bash
 cd client
+
 npm run dev
-```
 
 Frontend:
 
-```text
 http://localhost:5173
-```
+🖥️ Screenshots
 
----
+Screenshots are maintained inside the project's docs/screenshots/ directory.
 
-## 🌐 Deployment Architecture
+Recommended structure:
 
-The planned production architecture is:
+docs/
+└── screenshots/
+    ├── login.png
+    ├── register.png
+    ├── admin-dashboard.png
+    ├── admin-users.png
+    ├── admin-user-details.png
+    ├── admin-stores.png
+    ├── add-store.png
+    ├── user-dashboard.png
+    ├── rating.png
+    ├── owner-dashboard.png
+    └── change-password.png
+🔐 Login
 
-```text
-┌─────────────────┐
-│     Vercel      │
-│ React Frontend  │
-└────────┬────────┘
-         │
-         │ HTTPS
-         ▼
-┌─────────────────┐
-│     Render      │
-│ Express Backend │
-└────────┬────────┘
-         │
-         │ Prisma
-         ▼
-┌─────────────────┐
-│      Neon       │
-│    PostgreSQL   │
-└─────────────────┘
-```
+The login page supports role-based authentication for:
 
----
+User
+Admin
+Store Owner
+📝 Registration
 
-## 📸 Screenshots
+Users can create accounts by providing:
 
-Screenshots will be added after the production UI is finalized.
+Account type
+Full name
+Email
+Address
+Password
+👑 Admin Dashboard
 
-Planned screenshots:
+The administrator dashboard provides an overview of platform activity and management options.
 
-* Login
-* Registration
-* Admin Dashboard
-* Admin Users
-* Admin Stores
-* Normal User Store Listing
-* Rating Modal
-* Store Owner Dashboard
+👥 Admin User Management
 
----
+Administrators can search, filter, sort, and manage users.
 
-## 👨‍💻 Author
+👤 User Details
 
-**Vijay Dange**
+Administrators can inspect individual user information and account details.
+
+🏪 Admin Store Management
+
+Administrators can view and manage stores and their assigned owners.
+
+➕ Create Store
+
+Administrators can create a store and assign a unique store owner.
+
+⭐ User Rating
+
+Normal users can submit and modify ratings between 1 and 5.
+
+🏪 Store Owner Dashboard
+
+Store owners can monitor:
+
+Store information
+Average rating
+Total ratings
+Customers who rated the store
+🔑 Change Password
+
+Authenticated users can securely update their password.
+
+📊 Project Highlights
+
+This project demonstrates practical implementation of:
+
+Full-stack application development
+REST API design
+Role-based access control
+JWT authentication
+Secure password hashing
+Backend validation
+Database modeling
+Prisma ORM
+PostgreSQL relationships
+Unique database constraints
+CRUD operations
+Search functionality
+Filtering
+Sorting
+Rating aggregation
+Responsive UI
+Production deployment
+Frontend/backend separation
+Environment-based configuration
+🎯 Coding Challenge Requirements
+
+This project was developed as a solution to a Full-Stack Intern Coding Challenge involving:
+
+ReactJS frontend
+ExpressJS backend
+PostgreSQL database
+Role-based functionality
+Authentication
+Authorization
+Store management
+User management
+Store owner management
+Rating submission
+Rating modification
+Search
+Filtering
+Sorting
+Input validation
+Password security
+Database relationships
+Database constraints
+Responsive interface
+🔗 Project Links
+Resource	Link
+🌐 Live Frontend	https://rating-platform-1-70ga.onrender.com
+⚙️ Backend API	https://rating-platform-05rv.onrender.com
+💻 GitHub Repository	https://github.com/Vijay-ctrl/rating-platform
+👨‍💻 GitHub Profile	https://github.com/Vijay-ctrl
+💼 LinkedIn	https://linkedin.com/in/vijay-dange-40772927/
+👨‍💻 Author
+Vijay Dange
 
 Computer Engineering Student | Full-Stack Developer
 
-GitHub:
+Interested in:
+
+Full-Stack Development
+MERN Stack
+Backend Engineering
+System Design
+AI/ML
+Cloud & Deployment
+GitHub
+
 https://github.com/Vijay-ctrl
 
-LinkedIn:
+LinkedIn
+
 https://linkedin.com/in/vijay-dange-40772927/
 
----
+📄 License
 
-## 📄 Coding Challenge
+This project was created as part of a Full-Stack Intern Coding Challenge and is intended for educational, portfolio, and evaluation purposes.
 
-This project was developed as a solution to a Full-Stack Intern Coding Challenge requiring:
+⭐ Final Project Flow
+                    RATING PLATFORM
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+          ▼                ▼                ▼
+        ADMIN            USER         STORE OWNER
+          │                │                │
+          ▼                ▼                ▼
+   Manage Platform    Browse Stores    View Store
+          │                │                │
+          ├── Users        │                │
+          ├── Admins       │                │
+          ├── Owners       ▼                │
+          └── Stores    Submit Rating       │
+                           │                │
+                           ▼                │
+                    Rating Aggregation      │
+                           │                │
+                           └────────┬───────┘
+                                    ▼
+                            Owner Dashboard
+                                    │
+                                    ▼
+                           Customer Activity
+🚀 Deployment Architecture
+                     INTERNET
+                         │
+                         ▼
+        ┌─────────────────────────────┐
+        │       Render Static Site    │
+        │                             │
+        │      React + Vite App       │
+        │                             │
+        │ rating-platform-1-70ga      │
+        └──────────────┬──────────────┘
+                       │
+                       │ HTTPS / Axios
+                       ▼
+        ┌─────────────────────────────┐
+        │       Render Web Service    │
+        │                             │
+        │    Node.js + Express.js     │
+        │                             │
+        │ rating-platform-05rv        │
+        └──────────────┬──────────────┘
+                       │
+                       │ Prisma ORM
+                       ▼
+        ┌─────────────────────────────┐
+        │         PostgreSQL          │
+        │                             │
+        │ Users / Stores / Ratings    │
+        └─────────────────────────────┘
+✅ Project Completion
 
-* ReactJS frontend
-* ExpressJS backend
-* PostgreSQL database
-* Role-based functionality
-* Authentication
-* Store management
-* User management
-* Rating submission and modification
-* Search and sorting
-* Input validation
-* Database design best practices
+The Rating Platform has completed the core development, testing, and deployment workflow.
+
+The complete system now supports:
+
+Authentication
+      ↓
+Role-Based Authorization
+      ↓
+Admin Management
+      ↓
+User Management
+      ↓
+Store Owner Management
+      ↓
+Store Management
+      ↓
+Store Discovery
+      ↓
+Rating Submission
+      ↓
+Rating Modification
+      ↓
+Rating Aggregation
+      ↓
+Customer Activity
+      ↓
+Store Owner Dashboard
+      ↓
+Password Management
+      ↓
+Production Deployment
+
+Live Application:
+https://rating-platform-1-70ga.onrender.com
+
+Backend API:
+https://rating-platform-05rv.onrender.com
+
+Repository:
+https://github.com/Vijay-ctrl/rating-platform
